@@ -33,6 +33,7 @@ def verify_span(heads: List[List[Union[List[int], int]]]):
             first_child[child] = i
     for head in first_head:
         if head in first_child and first_head[head] < first_child[head]:
+            
             return False
     return True
 

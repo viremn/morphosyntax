@@ -7,7 +7,7 @@ from typing import List
 from copy import deepcopy
 from collections import defaultdict
 
-from swe_relations import case_feat_map, marker_feat_map
+from swe_relations import case_feat_map, marker_feat_map, conjtype_feat_map
 
 lang = 'swe'
 bank = 'PUD'
@@ -329,7 +329,7 @@ def apply_grammar(head: conllu.Token, children: List[conllu.Token]):
 
     # if there are auxiliaries "consume" them to change head's feats
     TAM_nodes = [child for child in children if child['upos'] in {'AUX', 'PART'}]
-    print(f"TAM_nodes={[node['form'] for node in TAM_nodes]}")
+    print(f"TAM_nodes={[(node['form'], case_feat_map.get(node['form'].lower(), None), marker_feat_map.get(node['form'].lower(), None), conjtype_feat_map.get(node['form'].lower(), None)) for node in TAM_nodes]}")
     # if TAM_nodes:
     #     head['ms feats'].update(get_nTAM_feats(TAM_nodes, head['feats'], verb=verb))
 
@@ -345,7 +345,7 @@ def apply_grammar(head: conllu.Token, children: List[conllu.Token]):
                       or child['lemma'] in case_feat_map)
                       and (child['upos'] != 'PART')]
     
-    print(f"relation_nodes= {[node['form'] for node in relation_nodes]}")
+    print(f"relation_nodes= {[(node['form'], case_feat_map.get(node['form'].lower(), None), marker_feat_map.get(node['form'].lower(), None), conjtype_feat_map.get(node['form'].lower(), None)) for node in relation_nodes]}")
     # if relation_nodes:
     #     to_update = get_relation_feats(relation_nodes, verb=verb, clause=head['deprel'] in clausal_rels)
     #     if to_update and not head['ms feats']:
