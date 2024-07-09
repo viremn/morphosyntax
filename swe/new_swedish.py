@@ -25,29 +25,51 @@ def combine_fixed_nodes(head, fixed_children):
     l.sort(key=lambda node: node['id'])
     return ' '.join([node['lemma'] for node in l])
 
-def get_nTAM_feats(aux_nodes: list[conllu.Token], 
-                   head_feats: dict, 
+def get_nTAM_feats(aux_nodes: list[conllu.Token],
+                   head_feats: dict,
                    children: list[conllu.Token],
                    verb=True) -> dict:
     '''
-    att, 
-    behöva, 
-    bli, 
-    böra, skola, torde, 
-    få, 
-    ha, 
-    inte, icke, ej, 
-    kunna, 
-    komma, 
-    lär, 
-    må, 
-    måste, 
-    vara, 
+    att,
+
+
+    bli (PASS),
+    ha,
+
+    INF
+    böra,
+    skola,
+    torde,
+    kunna,
+    lär,
+    komma,
+    må,
+    behöva,
+    måste,
     vilja
+
+    PART/INF
+    få,
+
+    NEG
+    inte, icke, ej,
+
+    COP
+    vara,
+
     '''
 
     feats = defaultdict(str)
+    modality = ''
 
+    aux_lemmas = {aux['lemma'] for aux in aux_nodes}
+    if verb:
+        if 'att' in aux_lemmas:
+            feats['VerbForm'] = 'Inf'
+            aux_lemmas.discard('att')
+        else:
+            feats['VerbForm'] = 'Fin'
+    
     subj_ids = [child['id'] for child in children if child['deprel'] in {'nsubj', 'expl'}]
     if subj_ids:
         subj_id = min(subj_ids)
@@ -66,36 +88,207 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
                     feats['Mood'] = 'Cnd'
                 elif response == 'n':
                     pass
-    
-    aux_lemmas = {aux['lemma'] for aux in aux_nodes}
-    if verb:
-        if 'att' in aux_lemmas:
-            feats['VerbForm'] = 'Inf'
-        else:
-            feats['VerbForm'] = 'Fin'
-    aux_lemmas.discard('att')
 
-    # setting the polarity of the main verb, assuming that there is no modality that require internal feature structure.
-    # down the line this will be rectified if there are modal auxiliaries.
-    if any(neg in aux_lemmas for neg in ('inte', 'icke', 'ej')):
-        feats['Polarity'] = 'Neg'
+    if 'bli' in aux_lemmas:
+        node = [node for node in aux_nodes if node.lemma == 'bli']
+        assert len(node) == 1
+        node = node[0]
+
+        feats['Voice'] = 'Pass'
+
+        if node['feats'].get('VerbForm', None) == 'Sup':
+            feats['Aspect'] += ',Perf'
+
+        if node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = node['feats'].get('Tense', feats['Tense'])
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+        aux_lemmas.discard('bli')
+
+    if 'få' in aux_lemmas: # Nec or Prms
+        modality += ',Prms'
+
+        node = [node for node in aux_nodes if node.lemma == 'få']
+        assert len(node) == 1
+        node = node[0]
+
+        if node['feats'].get('VerbForm', None) == 'Sup':
+            feats['Aspect'] += ',Perf'
+
+        if node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = node['feats'].get('Tense', feats['Tense'])         
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+        aux_lemmas.discard('få')
+
+    if 'komma' in aux_lemmas:
+        node = [node for node in aux_nodes if node.lemma == 'komma']
+        assert len(node) == 1
+        node = node[0]
+
+        if node['feats'].get('VerbForm', None) == 'Sup':
+            feats['Aspect'] += ',Perf'
+
+        if node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = 'Fut' if node['feats'].get('VerbForm', None) == 'Pres' else 'Past'
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+    aux_lemmas.discard('komma')
+
+    if 'måste' in aux_lemmas:
+        modality += ',Nec'
+
+        feats['Tense'] = 'Pres'
+        if not feats['Mood']: feats['Mood'] = 'Ind'
+
+        aux_lemmas.discard('måste')
+
+    if 'torde' in aux_lemmas:
+        modality += ',Nec'
+
+        feats['Tense'] = 'Past'
+        if not feats['Mood']: feats['Mood'] = 'Ind'
+
+        aux_lemmas.discard('torde')
+
+    if 'böra' in aux_lemmas:
+        node = [node for node in aux_nodes if node.lemma == 'böra']
+        assert len(node) == 1
+        node = node[0]
+
+        modality += ',Nec'
+
+        if node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = node['feats'].get('Tense', feats['Tense'])
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+
+        aux_lemmas.discard('böra')
+
+    if 'behöva' in aux_lemmas:
+        node = [node for node in aux_nodes if node.lemma == 'behöva']
+        assert len(node) == 1
+        node = node[0]
+
+        modality += ',Nec'
+
+        if node['feats'].get('VerbForm', None) == 'Sup':
+            feats['Aspect'] += ',Perf'
+
+        elif node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = node['feats'].get('Tense', feats['Tense'])
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+
+        aux_lemmas.discard('behöva')
+
+    if 'kunna' in aux_lemmas:
+        node = [node for node in aux_nodes if node.lemma == 'kunna']
+        assert len(node) == 1
+        node = node[0]
+
+        modality += ',Pot'
+
+        if node['feats'].get('VerbForm', None) == 'Sup':
+            feats['Aspect'] += ',Perf'
+
+        elif node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = node['feats'].get('Tense', feats['Tense'])
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+
+        aux_lemmas.discard('kunna')
+
+    if 'lär' in aux_lemmas:
+        modality += ',Pot'
+
+        feats['Tense'] = 'Pres'
+        if not feats['Mood']: feats['Mood'] = 'Ind'
+
+        aux_lemmas.discard('lär')
+
+    if 'vara' in aux_lemmas:
+        pass
+
+    if 'vilja' in aux_lemmas:
+        node = [node for node in aux_nodes if node.lemma == 'vilja']
+        assert len(node) == 1
+        node = node[0]
+
+        modality += ',Des'
+
+        if node['feats'].get('VerbForm', None) == 'Sup':
+            feats['Aspect'] += ',Perf'
+
+        elif node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = node['feats'].get('Tense', feats['Tense'])
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+        aux_lemmas.discard('vilja')
+
+    if 'må' in aux_lemmas:
+        node = [node for node in aux_nodes if node.lemma == 'må']
+        assert len(node) == 1
+        node = node[0]
+        
+        modality += ',Pot' # or maybe Jus/Opt?
+
+        if node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = node['feats'].get('Tense', feats['Tense'])
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+
+        aux_lemmas.discard('må')
+
+    if 'skola' in aux_lemmas:
+        node = [node for node in aux_nodes if node.lemma == 'skola']
+        assert len(node) == 1
+        node = node[0]
+
+        feats['Aspect'] += ',Prosp'
+
+        if node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = 'Fut' if node['feats'].get('Tense', None) == 'Pres' else 'Past'
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+            
+
+        aux_lemmas.discard('skola')
+
+    if 'ha' in aux_lemmas:
+        node = [node for node in aux_nodes if node.lemma == 'ha']
+        assert len(node) == 1
+        node = node[0]
+
+        if 'Perf' not in feats['Aspect']:
+            feats['Aspect'] += ',Perf'
+
+        if node['feats'].get('VerbForm', None) == 'Fin':
+            feats['Tense'] = node['feats'].get('Tense', feats['Tense'])
+            if not feats['Mood']: feats['Mood'] = node['feats'].get('Mood', 'Ind')
+        aux_lemmas.discard('ha')
+
+    if aux_lemmas&{'inte', 'icke', 'ej'}:
+        if modality:
+            modality = f'neg({modality})'
+        elif not modality:
+            feats['Polarity'] = 'Neg'
+        aux_lemmas.discard('inte')
+        aux_lemmas.discard('icke')
+        aux_lemmas.discard('ej')
     else:
         feats['Polarity'] = 'Pos'
-    aux_lemmas.discard('inte')
-    aux_lemmas.discard('icke')
-    aux_lemmas.discard('ej')
-
     
+    feats['Mood'] += modality
+    feats['Mood'] = feats['Mood'].strip(',')
+
+    if aux_lemmas:
+        raise ValueError(f'untreated auxiliaries. their lemmas: {aux_lemmas}')
+
+    feats = {k: ','.join(sorted(list(set(v.split(','))))) for k, v in feats.items() if v}
+
+    return feats
 
 def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
-    
+
     # remove children that are not of interest
     children = [child for child in children if not child['deprel'] in {'parataxis', 'reparandum', 'punct'}]
 
     fixed_children = [child for child in children if child['deprel'] == 'fixed']
     head['fixed lemma'] = combine_fixed_nodes(head, fixed_children)
     children = [child for child in children if child['deprel'] != 'fixed']
-    
+
     is_verb = head['upos'] in VERBAL
     is_noun = head['upos'] in NOMINAL
 
@@ -103,7 +296,7 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
         head['ms feats'] = {}
     else:
         head['ms feats'] = deepcopy(head['feats'])
-    
+
     TAM_nodes = [child for child in children if child['upos'] in {'AUX', 'PART'}]
     if TAM_nodes:
         head['ms feats'].update(get_nTAM_feats(TAM_nodes, head['feats'], children, is_verb))

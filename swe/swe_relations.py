@@ -88,7 +88,7 @@ case_feat_map = {
 
     'per': 'Dis',
     '/': 'Dis',
-    'a': 'Dis'
+    'a': 'Dis',
 
     'med': 'Com',
     'jämte': 'Com',
@@ -133,12 +133,12 @@ case_feat_map = {
     'när': 'Cnd', 
     'såvida': 'Cnd',
 
-    'apropå': 'The'
+    'apropå': 'The',
     'angående': 'The', 
     'beträffande': 'The',
 
     'alltefter': 'Quo', 
-    'all': 'Quo'
+    'all': 'Quo',
     'enligt': 'Quo',
 
     'för': 'Ben',
