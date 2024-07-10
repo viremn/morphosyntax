@@ -33,7 +33,7 @@ behöva -
 I meningen: 'Det skall inte mina soldater behöva bli utsatta för.'
     Vad bidrar "skall", "behöva" och "bli" med för särdrag till "utsatt"?
     Förslag:
-        "Skall" -> Mood=Des, Tense=Pres, VerbForm=Fin 
+        "Skall" -> Mood=Nec, Tense=Pres, VerbForm=Fin 
         "Behöva" -> Mood=Nec
         "Bli" -> Voice=Pass
 
