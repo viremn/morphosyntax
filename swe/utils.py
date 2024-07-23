@@ -1,5 +1,6 @@
 from typing import List, Union
 from copy import deepcopy
+import sys
 
 
 def span(parse_tree):
@@ -63,7 +64,8 @@ def get_response(possible_responses, prompt):
     response = None
     while response not in possible_responses:
         if response:
-            print(f'invalid response. options are {possible_responses}.')
-        print('##### USER INPUT NEEDED #####')
-        response = input(prompt)
+            print(f'invalid response. options are {possible_responses}.', file=sys.stderr)
+        print('##### USER INPUT NEEDED #####', file=sys.stderr)
+        print(prompt, file=sys.stderr)
+        response = input()
     return response

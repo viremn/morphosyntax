@@ -152,19 +152,17 @@ case_feat_map = {
 
     'på grund av': 'Cau',
     
-    'vid sida av': '',
-    'med hjälp av': '',
-    'till följd av': '',
-    'i och med': '',
-    'i form av': '',
-    'i ställe för': '',
-    'i motsats till': '',
-    'för sedan': '',
-    'i förhållande till': '',
-    'till skillnad från': '',
-    'i linje med': '',
-    
-    
+    'vid sida av': 'Apu',
+    'med hjälp av': 'Ins',
+    'till följd av': 'Cau',
+    'i och med': 'Cau',
+    'i form av': 'Sem',
+    'i ställe för': 'Sbs',
+    'i motsats till': 'Dsm',
+    'för sedan': 'Tem',
+    'i förhållande till': 'Cmp',
+    'till skillnad från': 'Dsm',
+    'i linje med': 'Rpl',
     
     '–': '',
     'fara': '',
@@ -277,13 +275,13 @@ marker_feat_map = {
     'över': 'The', # Funderar över, Glädjas över
 
     'för att': 'Cau',
-    'som om': '',
-    'allt eftersom': '',
-    'till dess': '',
-    'så att': '',
-    'efter att': '',
-    'även om': '',
-    'trotts att': '',
+    'som om': 'Rpl',
+    'allt eftersom': 'Cau',
+    'till dess': 'Ttr',
+    'så att': 'Pur',
+    'efter att': 'Tps',
+    'även om': 'Ccs',
+    'trotts att': 'Ccs',
 
     'att': '',
     'hur': '',

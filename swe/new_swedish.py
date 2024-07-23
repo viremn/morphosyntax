@@ -42,8 +42,8 @@ def get_relation_feats(relation_nodes: list[conllu.Token], verb=True, clause=Fal
     relation_nodes = deepcopy(relation_nodes)
     for node in relation_nodes:
         node['lemma'] = node.get('fixed lemma', node.get('lemma')) # kolla "på grund av"
-        if node['lemma'] == 'på grund av':
-            print('Found "på grund av"', verb, node['deprel'])
+        # if node['lemma'] == 'på grund av':
+            # print('Found "på grund av"', verb, node['deprel'])
 
     case_nodes = [node for node in relation_nodes if node['deprel'] == 'case']
     marker_nodes = [node for node in relation_nodes if node['deprel'] == 'mark']
@@ -76,14 +76,14 @@ def get_relation_feats(relation_nodes: list[conllu.Token], verb=True, clause=Fal
                         and node not in marker_nodes
                         and node not in case_nodes]
         
-        if [node for node in relation_nodes 
-                    if node not in marker_nodes 
-                    and node not in case_nodes 
-                    and node not in cc_nodes]:
-            print("ERROR:", [node for node in relation_nodes 
-                    if node not in marker_nodes 
-                    and node not in case_nodes 
-                    and node not in cc_nodes])
+        # if [node for node in relation_nodes 
+        #             if node not in marker_nodes 
+        #             and node not in case_nodes 
+        #             and node not in cc_nodes]:
+            # print("ERROR:", [node for node in relation_nodes 
+                    # if node not in marker_nodes 
+                    # and node not in case_nodes 
+                    # and node not in cc_nodes])
         assert not [node for node in relation_nodes 
                     if node not in marker_nodes 
                     and node not in case_nodes 
@@ -108,11 +108,11 @@ def get_relation_feats(relation_nodes: list[conllu.Token], verb=True, clause=Fal
     '''
         skriv en print för de relnodes som får lemma som särdrag
     '''
-    if node['lemma'] in {feats.get('RelType', ''), feats.get('ConjType', ''), feats.get('Case', '')}:
-        print('NO FEAT RELNODE', node['upos'], node['deprel'], node['lemma'])
-    if node['deprel'] not in {'case', 'mark', 'cc'}:
-        print('DIVERGENT DEPREL RELNODE', node['upos'], node['deprel'], node['lemma'])
-    print("RelNodes:", [node['lemma'] for node in relation_nodes], feats)
+    # if node['lemma'] in {feats.get('RelType', ''), feats.get('ConjType', ''), feats.get('Case', '')}:
+    #      print('NO FEAT RELNODE', node['upos'], node['deprel'], node['lemma'])
+    # if node['deprel'] not in {'case', 'mark', 'cc'}:
+    #      print('DIVERGENT DEPREL RELNODE', node['upos'], node['deprel'], node['lemma'])
+    #  print("RelNodes:", [node['lemma'] for node in relation_nodes], feats)
     
     return feats
 
@@ -376,7 +376,7 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
     if 'Mood' in feats:
         feats['Mood'] = feats['Mood'].replace('+', ',')
 
-    print("nTAM:", [node['lemma'] for node in aux_nodes], feats)
+    # print("nTAM:", [node['lemma'] for node in aux_nodes], feats)
 
     return feats
 
@@ -387,7 +387,7 @@ def copy_feats(ms_feats, morpho_feats, values):
     for value in values:
         ms_feats[value] = ms_feats.get(value, morpho_feats.get(value, None))
     
-    print("Copy feats from head:", ms_feats)
+    # print("Copy feats from head:", ms_feats)
     return ms_feats
 
 def set_nodes(nodes):
@@ -410,8 +410,8 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
     is_verb = head['upos'] in VERBAL
     is_noun = head['upos'] in NOMINAL
 
-    print(head)
-    print(parse_tree.metadata["text"])
+    # print(head)
+    # print(parse_tree.metadata["text"])
 
     if is_verb:
         head['ms feats'] = {}
@@ -433,15 +433,19 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
 
     relation_nodes = [child for child in children if
                       (child['deprel'] in {'case', 'mark', 'cc'}
-                      or child['lemma'] in marker_feat_map          # fråga Omer om varför detta är som det är
-                      or child['lemma'] in case_feat_map
-                      or child['lemma'] in conjtype_feat_map)
-                      and not child['upos'] in {'DET', 'PRON', 'NUM', 'PROPN'} 
-                      and not child['deprel'] in {'det', 'advmod', 'amod', 'advcl', 
-                                                  'flat:name', 'nsubj', 'compound', 
-                                                  'nsubj:pass', 'acl:relcl', 
-                                                  'nmod', 'obj', 'compound:prt', 
-                                                  }
+                       or (child['deprel'] in {'conj'}
+                           and child['lemma'] in (list(marker_feat_map.keys()) + 
+                                                  list(case_feat_map.keys()) +
+                                                  list(conjtype_feat_map.keys()))))
+                    #   or child['lemma'] in marker_feat_map          # fråga Omer om varför detta är som det är
+                    #   or child['lemma'] in case_feat_map
+                    #   or child['lemma'] in conjtype_feat_map)
+                    #   and not child['upos'] in {'DET', 'PRON', 'NUM', 'PROPN'} 
+                    #   and not child['deprel'] in {'det', 'advmod', 'amod', 'advcl', 
+                    #                               'flat:name', 'nsubj', 'compound', 
+                    #                               'nsubj:pass', 'acl:relcl', 
+                    #                               'nmod', 'obj', 'compound:prt', 
+                    #                               }
                       and child not in TAM_nodes]
     
     assert not any(node.get('fixed lemma', None) == 'den här' for node in relation_nodes), relation_nodes
@@ -453,9 +457,9 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
         # else:
         head['ms feats'].update(to_update)
     
-    if set_nodes(TAM_nodes) & set_nodes(relation_nodes):
-        for id in set_nodes(TAM_nodes) & set_nodes(relation_nodes):
-            print(parse_list[id2idx[id]])
+    # if set_nodes(TAM_nodes) & set_nodes(relation_nodes):
+        # for id in set_nodes(TAM_nodes) & set_nodes(relation_nodes):
+            # print(parse_list[id2idx[id]])
     assert not set_nodes(TAM_nodes) & set_nodes(relation_nodes)
 
     children = [node for node in children if node not in relation_nodes + TAM_nodes]
@@ -466,7 +470,7 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
 
         # set default values for feats underspecified in UD
         if not head['ms feats'].get('Voice', None): 
-            print('Setting default voice: ACT')
+            # print('Setting default voice: ACT')
             head['ms feats']['Voice'] = 'Act'
 
     elif is_noun or head['upos'] in {'ADV', 'ADJ'}:
@@ -606,20 +610,20 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
                 #     head['ms feats']['PronType'] = 'Int,Rel'
 
                 else:
-                    print(f'a non treated determiner: "{det_node["lemma"]}, {det_node["form"]}"')
+                    # print(f'a non treated determiner: "{det_node["lemma"]}, {det_node["form"]}"')
                     children = [det_node] + children
                 
-                print('DET_node:', det_node.get('fixed lemma', det_node['lemma']), head['ms feats'])
+                # print('DET_node:', det_node.get('fixed lemma', det_node['lemma']), head['ms feats'])
 
         if head['upos'] in {'ADV', 'ADJ'} and children:
             advj_children = [child['form'].lower() for child in children]
             if 'mer' in advj_children:
                 head['ms feats']['Degree'] = 'Cmp'
-                print('Found "mer"', head['ms feats'])
+                # print('Found "mer"', head['ms feats'])
               
             elif 'mest' in advj_children:
                 head['ms feats']['Degree'] = 'Sup'
-                print('Found "mest"', head['ms feats'])
+                # print('Found "mest"', head['ms feats'])
 
             children = [node for node in children if node['form'].lower() not in {'mer', 'mest'}]
 
@@ -632,11 +636,9 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
             if ms_feats is None:
                 ms_feats = '|'
             child['ms feats'] = ms_feats
-            print('Child:', child['lemma'], ms_feats)
-        
-    print()
+            # print('Child:', child['lemma'], ms_feats)
 
-    # del head['fixed lemma']
+    del head['fixed lemma']
 
 
 if __name__ == '__main__':
@@ -667,6 +669,9 @@ if __name__ == '__main__':
                 head: conllu.Token = parse_list[id2idx[head]]
                 children = [parse_list[id2idx[child]] for child in children]
                 apply_grammar(head, children)
+                # print('Final feats:', head['ms feats'])
+                # print()
+                
 
             for node in parse_list:
                 # setting ms-feats for content nodes that were not dealt with earlier
@@ -675,20 +680,33 @@ if __name__ == '__main__':
                     if ms_feats is None:
                         ms_feats = '|'
                     node['ms feats'] = ms_feats
+                    # print('setting content node feats: ', node['ms feats'])
+                    # print()
                 elif node['upos'] in {'ADP', 'ADV'} and node['deprel'] == 'advmod' and not node.get('ms feats', None):
                     ms_feats = deepcopy(node['feats'])
                     if ms_feats is None:
                         ms_feats = '|'
                     node['ms feats'] = ms_feats
-                    print('FixedNode:', node['lemma'], ms_feats)
-                    print()
+                    # print('FixedNode:', node['lemma'], ms_feats)
+                    # print()
                 # function nodes end up with empty ms-feats
                 
                 else:
                     node['ms feats'] = node.get('ms feats', None)
-            
+                # if node['ms feats'] is None:
+                    # print('FUNCTION NODE:', node)
+                    # print()
             assert utils.verify_treeness(parse_list)
             
+            print(' '.join(node['form'].lower() if node['ms feats'] is None else node['form'].upper() for node in parse_list))
+            for node in parse_list:
+                if node['ms feats'] is not None:
+                    print('\tForm:', node['form'], 
+                          '\tLemma:', node['lemma'], 
+                          '\tMSFeats:', node['ms feats'], 
+                          '\tAbsorbed_Children:', [child['form'] for child in parse_list if child['ms feats'] is None and child['head'] == node['id']])
+
+            print()
             to_write = parse_list.serialize()
             outfile.write(to_write + '\n')
                 
