@@ -50,7 +50,8 @@ def verify_treeness(parse_list):
             new_list.append(node)
             new_ids.add(node['id'])
     for node in new_list:
-        if node['head'] not in new_ids:
+        if node['head'] and node['head'] not in new_ids:
+            print('HEAD NOT A CONTENT WORD', node['id'], node['lemma'], node['head'], [n for n in parse_list if n['id'] == node['head']])
             return False
     return True
 

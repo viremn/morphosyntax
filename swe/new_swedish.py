@@ -41,41 +41,40 @@ def get_relation_feats(relation_nodes: list[conllu.Token], verb=True, clause=Fal
 
     relation_nodes = deepcopy(relation_nodes)
     for node in relation_nodes:
-        node['lemma'] = node.get('fixed lemma', node.get('lemma'))
+        node['lemma'] = node.get('fixed lemma', node.get('lemma')) # kolla "på grund av"
+        if node['lemma'] == 'på grund av':
+            print('Found "på grund av"', verb, node['deprel'])
+
+    case_nodes = [node for node in relation_nodes if node['deprel'] == 'case']
+    marker_nodes = [node for node in relation_nodes if node['deprel'] == 'mark']
+    cc_nodes = [node for node in relation_nodes if node['deprel'] == 'cc']
+
+    remaining_nodes = [node for node in relation_nodes if node not in case_nodes and node not in marker_nodes and node not in cc_nodes]
 
     if not verb:
         if clause:
             # if it's a noun heading a clause I assume adpositions are defaultly markers
-            marker_nodes = [node for node in relation_nodes
-                        if (node['deprel'] == 'mark'
-                        or node['lemma'] in marker_feat_map) 
-                        and node['deprel'] != 'cc']
-            case_nodes = [node for node in relation_nodes
-                        if (node['deprel'] == 'case'
-                        or node['lemma'] in case_feat_map)
+            marker_nodes += [node for node in remaining_nodes
+                             if node['lemma'] in marker_feat_map]
+            
+            case_nodes += [node for node in remaining_nodes
+                           if node['lemma'] in case_feat_map
+                           and node not in marker_nodes]
+            cc_nodes += [node for node in remaining_nodes
+                        if node['lemma'] in conjtype_feat_map
                         and node not in marker_nodes
-                        and node['deprel'] != 'cc']
-            cc_nodes = [node for node in relation_nodes 
-                        if (node['deprel'] == 'cc' 
-                            or node['lemma'] in conjtype_feat_map)
-                            and node not in marker_nodes
-                            and node not in case_nodes]
+                        and node not in case_nodes]
         else:
             # else, I assume adpositions are defaultly cases
-            case_nodes = [node for node in relation_nodes
-                        if (node['deprel'] == 'case'
-                        or node['lemma'] in case_feat_map) 
-                        and node['deprel'] != 'cc']
-            marker_nodes = [node for node in relation_nodes
-                        if (node['deprel'] == 'mark'
-                        or node['lemma'] in marker_feat_map)
-                        and node not in case_nodes
-                        and node['deprel'] != 'cc']
-            cc_nodes = [node for node in relation_nodes 
-                        if (node['deprel'] == 'cc' 
-                            or node['lemma'] in conjtype_feat_map)
-                            and node not in marker_nodes
-                            and node not in case_nodes]
+            case_nodes += [node for node in remaining_nodes
+                           if node['lemma'] in case_feat_map]
+            marker_nodes += [node for node in remaining_nodes
+                             if node['lemma'] in marker_feat_map
+                             and node not in case_nodes]
+            cc_nodes += [node for node in remaining_nodes 
+                        if node['lemma'] in conjtype_feat_map
+                        and node not in marker_nodes
+                        and node not in case_nodes]
         
         if [node for node in relation_nodes 
                     if node not in marker_nodes 
@@ -97,11 +96,24 @@ def get_relation_feats(relation_nodes: list[conllu.Token], verb=True, clause=Fal
         if cc_nodes:
             feats['ConjType'] = ','.join([conjtype_feat_map.get(node['lemma'], node['lemma']) for node in cc_nodes])
 
+        
+
     else:
         marker_nodes = [node for node in relation_nodes if node['deprel'] != 'cc']
         feats['RelType'] = ','.join([get_rel_feat(node['lemma']) for node in marker_nodes])
-    
+
+        cc_nodes = [node for node in relation_nodes if node not in marker_nodes]
+        feats['ConjType'] = ','.join([get_conj_feat(node['lemma']) for node in cc_nodes])
+
+    '''
+        skriv en print för de relnodes som får lemma som särdrag
+    '''
+    if node['lemma'] in {feats.get('RelType', ''), feats.get('ConjType', ''), feats.get('Case', '')}:
+        print('NO FEAT RELNODE', node['upos'], node['deprel'], node['lemma'])
+    if node['deprel'] not in {'case', 'mark', 'cc'}:
+        print('DIVERGENT DEPREL RELNODE', node['upos'], node['deprel'], node['lemma'])
     print("RelNodes:", [node['lemma'] for node in relation_nodes], feats)
+    
     return feats
 
 
@@ -386,6 +398,8 @@ def set_nodes(nodes):
 
 def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
 
+    assert head['deprel'] != 'fixed'
+
     # remove children that are not of interest
     children = [child for child in children if not child['deprel'] in {'parataxis', 'reparandum', 'punct'}]
 
@@ -419,10 +433,18 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
 
     relation_nodes = [child for child in children if
                       (child['deprel'] in {'case', 'mark', 'cc'}
-                      or child['lemma'] in marker_feat_map
+                      or child['lemma'] in marker_feat_map          # fråga Omer om varför detta är som det är
                       or child['lemma'] in case_feat_map
-                      or child['lemma'] in conjtype_feat_map) 
+                      or child['lemma'] in conjtype_feat_map)
+                      and not child['upos'] in {'DET', 'PRON', 'NUM', 'PROPN'} 
+                      and not child['deprel'] in {'det', 'advmod', 'amod', 'advcl', 
+                                                  'flat:name', 'nsubj', 'compound', 
+                                                  'nsubj:pass', 'acl:relcl', 
+                                                  'nmod', 'obj', 'compound:prt', 
+                                                  }
                       and child not in TAM_nodes]
+    
+    assert not any(node.get('fixed lemma', None) == 'den här' for node in relation_nodes), relation_nodes
     
     if relation_nodes:
         to_update = get_relation_feats(relation_nodes, verb=is_verb, clause=head['deprel'] in clausal_rels)
@@ -430,8 +452,6 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
         #     head['ms feats'] = to_update
         # else:
         head['ms feats'].update(to_update)
-
-
     
     if set_nodes(TAM_nodes) & set_nodes(relation_nodes):
         for id in set_nodes(TAM_nodes) & set_nodes(relation_nodes):
@@ -451,177 +471,145 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
 
     elif is_noun or head['upos'] in {'ADV', 'ADJ'}:
         # treat determiners
-        foreign = {'a', 'the', 'this', 'that', 'die', 'el', 'la', 'las', 'le'}
-        det_nodes = [child for child in children if child['deprel'] == 'det' and not child['form'].lower() in foreign]
+        det_nodes = [child for child in children if child['deprel'] == 'det']
         children = [node for node in children if node['deprel'] != 'det']
         if det_nodes:
             for det_node in det_nodes:
-                if det_node['form'].lower() == 'en':
-                    head['ms feats']['Definite'] = 'Ind'
-                    head['ms feats']['Gender'] = 'Com'
-                    head['ms feats']['Number'] = 'Sing'
-
-                elif det_node['form'].lower() == 'ett':
-                    head['ms feats']['Definite'] = 'Ind'
-                    head['ms feats']['Gender'] = 'Neut'
-                    head['ms feats']['Number'] = 'Sing'
-
-                elif det_node['form'].lower() == 'den':
-                    head['ms feats']['Definite'] = 'Def'
-                    head['ms feats']['Gender'] = 'Com'
-                    head['ms feats']['Number'] = 'Sing'
-
-                elif det_node['form'].lower() == 'det':
-                    head['ms feats']['Definite'] = 'Def'
-                    head['ms feats']['Gender'] = 'Neut'
-                    head['ms feats']['Number'] = 'Sing'
-
-                elif det_node['form'].lower() == 'de':
-                    head['ms feats']['Definite'] = 'Def'
-                    head['ms feats']['Number'] = 'Plur'
-
-                elif det_node['form'].lower() == 'denna':
-                    head['ms feats']['Definite'] = 'Def'
-                    head['ms feats']['Gender'] = 'Com'
-                    head['ms feats']['Number'] = 'Sing'
-                    head['ms feats']['Dem'] = 'Prox'
-
-                elif det_node['form'].lower() == 'denne':
-                    head['ms feats']['Definite'] = 'Def'
-                    head['ms feats']['Gender'] = 'Com'
-                    head['ms feats']['Number'] = 'Sing'
-                    head['ms feats']['Dem'] = 'Prox'
-
-                elif det_node['form'].lower() == 'detta':
-                    head['ms feats']['Definite'] = 'Def'
-                    head['ms feats']['Gender'] = 'Neut'
-                    head['ms feats']['Number'] = 'Sing'
-                    head['ms feats']['Dem'] = 'Prox'
-
-                elif det_node['form'].lower() == 'dessa':
-                    head['ms feats']['Definite'] = 'Def'
-                    head['ms feats']['Number'] = 'Plur'
-                    head['ms feats']['Dem'] = 'Prox' 
-                
-                elif det_node['form'].lower() in {'båda', 'bägge'}:
-                    head['ms feats']['Definite'] = 'Def'
-                    head['ms feats']['Number'] = 'Plur'
-                    head['ms feats']['PronType'] = 'Tot'
-
-                elif det_node['form'].lower() in {'var', 'vart', 'varje', 'varenda', 'vardera'}:
+                if det_node['lemma'] == 'en':
                     head['ms feats']['Definite'] = 'Ind'
                     head['ms feats']['Number'] = 'Sing'
-                    head['ms feats']['PronType'] = 'Tot'
 
-                    if det_node['form'].lower() == 'vart':
+                    if det_node['form'].lower() == 'ett':
                         head['ms feats']['Gender'] = 'Neut'
-                    elif det_node['form'].lower() == 'var':
+                    else:
                         head['ms feats']['Gender'] = 'Com'
 
-                elif det_node['form'].lower() in {'varannan', 'varannat'}:
-                    head['ms feats']['Definite'] = 'Ind'
-                    head['ms feats']['Number'] = 'Sing'
-                    head['ms feats']['PronType'] = 'Ind'
-
-                    if det_node['form'].lower() == 'varannat':
-                        head['ms feats']['Gender'] = 'Neut'
-                    elif det_node['form'].lower() == 'varannan':
-                        head['ms feats']['Gender'] = 'Com'
-                
-                elif det_node['form'].lower() == 'all':
-                    head['ms feats']['Definite'] = 'Ind'
-                    head['ms feats']['Gender'] = 'Com'
-                    head['ms feats']['Number'] = 'Sing'
-                    head['ms feats']['PronType'] = 'Tot'
-                
-                elif det_node['form'].lower() == 'allt':
-                    head['ms feats']['Definite'] = 'Ind'
-                    head['ms feats']['Gender'] = 'Neut'
-                    head['ms feats']['Number'] = 'Sing'
-                    head['ms feats']['PronType'] = 'Tot'
-                
-                elif det_node['form'].lower() == 'alla':
-                    head['ms feats']['Definite'] = 'Ind'
-                    head['ms feats']['Number'] = 'Plur'
-                    head['ms feats']['PronType'] = 'Tot'
-
-                elif det_node['form'].lower() in {'min', 'mitt', 'mina',
-                                                  'din', 'ditt', 'dina',
-                                                  'sin', 'sitt', 'sina',
-                                                  # 'hans', 'hennes',
-                                                  'deras'}:
+                elif det_node['lemma'] == 'den':
                     head['ms feats']['Definite'] = 'Def'
-                    head['ms feats']['Poss'] = 'Yes'
-                    head['ms feats']['PronType'] = 'Prs'
-                    
-                    if det_node['form'].lower() in {'min', 'mitt',
-                                                    'din', 'ditt',
-                                                    'sin', 'sitt'}:
-                        head['ms feats']['Number'] = 'Sing'
-                        if det_node['form'].lower().endswith('tt'):
-                            head['ms feats']['Gender'] = 'Neut'
-                        else:
-                            head['ms feats']['Gender'] = 'Com'
-                    
-                    elif det_node['form'].lower() in {'mina',
-                                                  'dina',
-                                                  'sina'}:
-                        head['ms feats']['Number'] = 'Plur'
-                    
-                    if det_node['form'].lower()[0] == 'm':
-                        head['ms feats']['Person'] = '1'
-                    elif det_node['form'].lower()[0:2] == 'di':
-                        head['ms feats']['Person'] = '2'
-                    elif det_node['form'].lower()[0:2] in {'si', 'de'}:
-                        head['ms feats']['Person'] = '3'
+                    head['ms feats']['Number'] = 'Sing'
 
-                elif det_node['form'].lower() in {'vilken', 
-                                                  'vilket',
-                                                  'vilka'}:
-                    head['ms feats']['Definite'] = 'Ind'
-                    head['ms feats']['PronType'] = 'Int,Rel'
+                    if det_node.get('fixed lemma', det_node['lemma']) == 'den här':
+                            head['ms feats']['Dem'] = 'Prox'
+                    elif det_node.get('fixed lemma', det_node['lemma']) == 'den där':
+                            head['ms feats']['Dem'] = 'Dist'
+
+                    if det_node['form'].lower() == 'den':
+                        head['ms feats']['Gender'] = 'Com'
                     
-                    if det_node['form'].lower() == 'vilka':
+
+                    elif det_node['form'].lower() == 'det':          
+                        head['ms feats']['Gender'] = 'Neut'
+              
+                elif det_node['lemma'] == 'de':
+                    head['ms feats']['Definite'] = 'Def'
+                    head['ms feats']['Number'] = 'Plur'
+
+                    if det_node.get('fixed lemma', det_node['lemma']) == 'de här':
+                            head['ms feats']['Dem'] = 'Prox'
+                    elif det_node.get('fixed lemma', det_node['lemma']) == 'de där':
+                            head['ms feats']['Dem'] = 'Dist'
+
+                elif det_node['lemma'] == 'denna':
+                    head['ms feats']['Definite'] = 'Def'
+                    head['ms feats']['Dem'] = 'Prox'
+
+                    if det_node['form'].lower() == 'dessa':
                         head['ms feats']['Number'] = 'Plur'
                     else:
                         head['ms feats']['Number'] = 'Sing'
-                    
-                    if det_node['form'].lower() == 'vilken':
-                        head['ms feats']['Gender'] = 'Com'
-                    elif det_node['form'].lower() == 'vilket':
+
+                    if det_node['form'].lower() == 'detta':
                         head['ms feats']['Gender'] = 'Neut'
+                    else:
+                        head['ms feats']['Gender'] = 'Com'
+                
+                # elif det_node['form'].lower() in {'båda', 'bägge'}:
+                #     head['ms feats']['Definite'] = 'Def'
+                #     head['ms feats']['Number'] = 'Plur'
+                #     head['ms feats']['PronType'] = 'Tot'
+
+                # elif det_node['form'].lower() in {'var', 'vart', 'varje', 'vardera'}:
+                #     head['ms feats']['Definite'] = 'Ind'
+                #     head['ms feats']['Number'] = 'Sing'
+                #     head['ms feats']['PronType'] = 'Tot'
+
+                #     if det_node['form'].lower() == 'vart':
+                #         head['ms feats']['Gender'] = 'Neut'
+                #     elif det_node['form'].lower() == 'var':
+                #         head['ms feats']['Gender'] = 'Com'
+                
+                # elif det_node['form'].lower() == 'all':
+                #     head['ms feats']['Definite'] = 'Ind'
+                #     head['ms feats']['Gender'] = 'Com'
+                #     head['ms feats']['Number'] = 'Sing'
+                #     head['ms feats']['PronType'] = 'Tot'
+                
+                # elif det_node['form'].lower() == 'allt':
+                #     head['ms feats']['Definite'] = 'Ind'
+                #     head['ms feats']['Gender'] = 'Neut'
+                #     head['ms feats']['Number'] = 'Sing'
+                #     head['ms feats']['PronType'] = 'Tot'
+                
+                # elif det_node['form'].lower() == 'alla':
+                #     head['ms feats']['Definite'] = 'Ind'
+                #     head['ms feats']['Number'] = 'Plur'
+                #     head['ms feats']['PronType'] = 'Tot'
+
+                # elif det_node['form'].lower() in {'vilken', 
+                #                                   'vilket',
+                #                                   'vilka'}:
+                #     head['ms feats']['Definite'] = 'Ind'
+                #     head['ms feats']['PronType'] = 'Int,Rel'
+                    
+                #     if det_node['form'].lower() == 'vilka':
+                #         head['ms feats']['Number'] = 'Plur'
+                #     else:
+                #         head['ms feats']['Number'] = 'Sing'
+                    
+                #     if det_node['form'].lower() == 'vilken':
+                #         head['ms feats']['Gender'] = 'Com'
+                #     elif det_node['form'].lower() == 'vilket':
+                #         head['ms feats']['Gender'] = 'Neut'
 
                 elif det_node['form'].lower() in {'någon', 
                                                   'något',
                                                   'några'}:
                     head['ms feats']['Definite'] = 'Ind'
-                    if det_node['form'].lower().endswith('n'):
+                    head['ms feats']['PronType'] = 'Ind'
+
+                    if det_node['form'].lower() == 'någon':
                         head['ms feats']['Gender'] = 'Com'
                         head['ms feats']['Number'] = 'Sing'
-                    elif det_node['form'].lower().endswith('t'):
+                    elif det_node['form'].lower() == 'något':
                         head['ms feats']['Gender'] = 'Neut'
                         head['ms feats']['Number'] = 'Sing'
                     else:
                         head['ms feats']['Number'] = 'Plur'
 
-                elif det_node['form'].lower() in {'ingen', 
+                elif det_node['form'].lower() in {'ingen',       # fråga omer om detta, var drar vi gränsen?
                                                   'inget',
                                                   'inga'}:
                     head['ms feats']['Definite'] = 'Ind'
                     head['ms feats']['PronType'] = 'Neg'
 
-                    if det_node['form'].lower().endswith('n'):
+                    if det_node['form'].lower() == 'ingen':
                         head['ms feats']['Gender'] = 'Com'
                         head['ms feats']['Number'] = 'Sing'
-                    elif det_node['form'].lower().endswith('t'):
+                    elif det_node['form'].lower() == 'inget':
                         head['ms feats']['Gender'] = 'Neut'
                         head['ms feats']['Number'] = 'Sing'
                     else:
                         head['ms feats']['Number'] = 'Plur'
 
+                # elif det_node['lemma'] == 'vad':
+                #     head['ms feats']['Definite'] = 'Ind'
+                #     head['ms feats']['PronType'] = 'Int,Rel'
+
                 else:
-                    print(f'a non treated determiner: "{det_node["lemma"]}"')
+                    print(f'a non treated determiner: "{det_node["lemma"]}, {det_node["form"]}"')
                     children = [det_node] + children
+                
+                print('DET_node:', det_node.get('fixed lemma', det_node['lemma']), head['ms feats'])
 
         if head['upos'] in {'ADV', 'ADJ'} and children:
             advj_children = [child['form'].lower() for child in children]
@@ -639,16 +627,16 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
         head['ms feats'] = {k: v for k, v in head['ms feats'].items() if v}
 
     for child in children:
-        if child['upos'] in {'ADV', 'ADJ', 'INTJ', 'DET'} | VERBAL | NOMINAL and not child.get('ms feats', None):
+        if (child['upos'] in {'ADV', 'ADJ', 'INTJ', 'DET'} | VERBAL | NOMINAL) and not child.get('ms feats', None):
             ms_feats = deepcopy(child['feats'])
             if ms_feats is None:
                 ms_feats = '|'
             child['ms feats'] = ms_feats
             print('Child:', child['lemma'], ms_feats)
-    
+        
     print()
 
-    del head['fixed lemma']
+    # del head['fixed lemma']
 
 
 if __name__ == '__main__':
@@ -665,6 +653,7 @@ if __name__ == '__main__':
         for i in range(len(parse_trees)):
             parse_tree = parse_trees[i]
             parse_list: conllu.TokenList = parse_lists[i]
+            # assert all([node['head'] is not None for node in parse_list]), parse_list
 
             id2idx = {token['id']:i for i, token in enumerate(parse_list) if isinstance(token['id'], int)}
             idx2id = [token['id'] if isinstance(token['id'], int) else None for token in parse_list]
@@ -678,15 +667,23 @@ if __name__ == '__main__':
                 head: conllu.Token = parse_list[id2idx[head]]
                 children = [parse_list[id2idx[child]] for child in children]
                 apply_grammar(head, children)
-            
+
             for node in parse_list:
                 # setting ms-feats for content nodes that were not dealt with earlier
-                if node['upos'] in {'ADJ', 'INTJ'} | VERBAL | NOMINAL and not node.get('ms feats', None):
+                if node['upos'] in {'ADJ', 'INTJ'} | VERBAL | NOMINAL and not node.get('ms feats', None) and node['deprel'] != 'fixed':
                     ms_feats = deepcopy(node['feats'])
                     if ms_feats is None:
                         ms_feats = '|'
                     node['ms feats'] = ms_feats
+                elif node['upos'] in {'ADP', 'ADV'} and node['deprel'] == 'advmod' and not node.get('ms feats', None):
+                    ms_feats = deepcopy(node['feats'])
+                    if ms_feats is None:
+                        ms_feats = '|'
+                    node['ms feats'] = ms_feats
+                    print('FixedNode:', node['lemma'], ms_feats)
+                    print()
                 # function nodes end up with empty ms-feats
+                
                 else:
                     node['ms feats'] = node.get('ms feats', None)
             

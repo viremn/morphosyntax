@@ -14,11 +14,12 @@ case_feat_map = {
     
     'a': 'Dis',
     'all': 'Inc',
-    'alltefter': 'Cnd', # Quo?
+    'alltefter': 'Cau', # Quo?
     'alltifrån': 'Add',
     'angående': 'The',
     'apropå': 'The',
     'av': 'Agt', # ?
+
     'bak': 'Pst',
     'bakom': 'Pst',
     'beroende': 'Cnd',
@@ -28,12 +29,14 @@ case_feat_map = {
     'bortom': 'Psl',
     'bortsedd': 'Exc',
     'bredvid': 'Apu',
+
     'efter': 'Tps',
     'emellan': 'Int',
     'emot': 'Adv',
     'enl': 'Quo',
     'enligt': 'Quo',
     'exkl': 'Exc',
+
     'fastän': 'Ccs',
     'framemot': 'Tpx',
     'framför': 'Ant',
@@ -45,11 +48,14 @@ case_feat_map = {
     'förrän': 'Tan',
     'förutan': 'Add',
     'förutom': 'Add',
+
     'genom': 'Per',
     'gentemot': 'Lat',
     'gällande': 'The',
+
     'hos': 'Loc',
     'härifrån': 'Abl',
+
     'i': 'Ine',
     'ifråga': 'The',
     'ifrån': 'Ela',
@@ -64,39 +70,49 @@ case_feat_map = {
     'intill': 'Apu',
     'inåt': 'Inx',
     'istället': 'Sbs',
-    'jämförd': '',
+
+    'jämförd': 'Cmp',
     'jämte': 'Com',
+
     'kontra': 'Adv',
     'kring': 'Cir',
+
     'liksom': 'Sem',
     'likt': 'Sem',
     'längs': 'Lng',
+
     'med': 'Com',
     'medan': 'Cmt',
     'mellan': 'Int',
     'mot': 'Adv',
+
     'nedanför': 'Sub',
     'nedför': 'Dsc',
     'nedom': 'Sub',
     'när': 'Cnd',
     'nära': 'Prx',
+
     'oavsett': 'Ign',
-    'oberoende': '',
+    'oberoende': 'Ign',
     'om': 'The', # Dis, Cir
     'omkring': 'Cir',
     'ovan': 'Sup',
     'ovanför': 'Sup',
     'ovanpå': 'Sup',
+
     'per': 'Dis',
     'plus': 'Inc',
     'på': 'Ade',
+
     'runt': 'Cir',
     'runtomkring': 'Cir',
     'rörande': 'The',
+
     'sedan': 'Teg',
     'sen': 'Teg',
     'senast': 'Lim',
     'som': 'Rpl',
+    
     'tack': 'Cau',
     'till': 'Lat',
     'till_och_med': 'Lat',
@@ -105,6 +121,7 @@ case_feat_map = {
     'tvärsigenom': 'Crs',
     'tvärsöver': 'Crs',
     'tvärtemot': 'Dsm',
+
     'undan': 'Abl',
     'under': 'Sub',
     'uppför': 'Asc',
@@ -120,56 +137,78 @@ case_feat_map = {
     'utom': 'Ext', # Add
     'utåt': 'Ext',
     'utöver': 'Add',
-    'vad': '',
+    
     'via': 'Pro',
     'vid': 'Loc',
+
     'à': 'Dis',
+
     'än': 'Cmp',
-    'å': 'Ben', # The
+
+    'å': 'Ade', 
     'åt': 'Ben',
+
     'över': 'Spx',
+
+    'på grund av': 'Cau',
     
-    # '–': '',
-    # 'fara': '',
-    # 'den': '',
-    # 'de': '',
-    # 'from': '',
-    # 'over': '',
-    # 'of': '',
-    # 'to': '',
-    # 'for': '',
-    # 'De': '',
-    # 'I': '',
-    # 'In': '',
-    # 'Of': '',
-    # 'On': '',
+    'vid sida av': '',
+    'med hjälp av': '',
+    'till följd av': '',
+    'i och med': '',
+    'i form av': '',
+    'i ställe för': '',
+    'i motsats till': '',
+    'för sedan': '',
+    'i förhållande till': '',
+    'till skillnad från': '',
+    'i linje med': '',
+    
+    
+    
+    '–': '',
+    'fara': '',
+    'den': '',
+    'de': '',
+    'vad': '',
+
+    'from': '',
+    'over': '',
+    'of': '',
+    'to': '',
+    'for': '',
+    'De': '',
+    'I': '',
+    'In': '',
+    'Of': '',
+    'On': '',
 }
-case_feat_map = {k: v if v else k for k,v in case_feat_map.items()}
-
-
-
+case_feat_map = {k: (v if v else k) for k,v in case_feat_map.items()}
 
 marker_feat_map = {
     'all': 'Inc',
     'allt': 'Inc',
-    'alltefter': 'Cnd', 
-    'allteftersom': 'Cnd',
-    'antingen': '',
-    'att': '',
+    'alltefter': 'Cau', 
+    'allteftersom': 'Cau',
+    'antingen': 'Disj',
     'av': 'Gen', # ?
+
     'bakom': 'Pst',
     'beroende': 'Cnd',
     'bortsedd': 'Exc',
+
     'där': 'Loc',
     'därför': 'Cau',
     'däri': 'Ine',
     'därigenom': 'Ins',
     'då': 'Tps', # Cau
+
     'efter': 'Pst', # 
     'eftersom': 'Cau',
     'ehuruväl': 'Ccs', # Concessive?
     'emedan': 'Cau',
     'emot': 'Adv',
+
     'fast': 'Ccs',
     'fastän': 'Ccs',
     'från': 'Abl', 
@@ -177,27 +216,34 @@ marker_feat_map = {
     'förrän': 'Tan',
     'förutom': 'Exc',
     'förutsatt': 'Cnd',
+
     'genom': 'Ins', # Per
-    'hur': '',
-    'huruvida': '',
+    
     'i': 'Ine',
     'ifall': 'Cnd',
     'ifråga': 'The',
     'ifrån': 'Abl',
     'innan': 'Tan',
+
     'liksom': 'Sem',
+
     'med': 'Com',
     'medan': 'Add',
     'mellan': 'Int',
     'mot': 'Adv',
+
     'när': 'Tem',
+
     'oavsedd': 'Ign',
     'oavsett': 'Ign',
     'oberoende': 'Ign',
-    'om': 'Cnd',
+    'om': 'The', # Cnd
+
     'på': 'Ade', # beror på, bevis på, 
+
     'samtidig': 'Dur', # Com
     'samtidigt': 'Dur', # Com
+
     'sedan': 'Tps', 
     'snart': 'Tps',
     'som': 'Rpl', # Sem, Equ
@@ -205,41 +251,56 @@ marker_feat_map = {
     'såsom': 'Sem',
     'såvida': 'Cnd',
     'såvitt': 'Cnd',
+
     'till': 'Lat',
     'tills': 'Ttr',
     'trots': 'Ign',
-    'under': 'Sub', # Under förutsättningen
+    
+    'under': 'Cnd', # Under förutsättningen
     'uppå': 'Ade',
     'utan': 'Abe',
     'utom': 'Exc',
     'utöver': 'Add',
-    'vad': '',
-    'var': '',
-    'vare': '',
+    
+    'var': 'Loc',
+    'vare': 'Disj',
     'varför': 'Cau',
     'varigenom': 'Cau',
     'vart': 'Lat',
     'vid': 'Apu',
+    
     'än': 'Cmp',
     'även': 'Add',
+    
     'åt': 'Ori',
+    
     'över': 'The', # Funderar över, Glädjas över
 
-    # 'inte': '', # Vet inte om denna bör vara mark??
+    'för att': 'Cau',
+    'som om': '',
+    'allt eftersom': '',
+    'till dess': '',
+    'så att': '',
+    'efter att': '',
+    'även om': '',
+    'trotts att': '',
 
-
-
-    # 'where': '',
-    # 'If': '',
+    'att': '',
+    'hur': '',
+    'huruvida': '',
+    'vad': '',
+    'inte': '', # Vet inte om denna bör vara mark??
+    'where': '',
+    'If': '',
 }
-marker_feat_map = {k: v if v else k for k,v in marker_feat_map.items()}
+marker_feat_map = {k: (v if v else k) for k,v in marker_feat_map.items()}
 
 conjtype_feat_map = {
     '&': 'Conj',
     '+': 'Conj',
-    '-': 'Lat',
+    '-': '',
     '/': 'Disj',
-    'a': 'Dis',
+    'a': '',
     'antingen': 'Disj',
     'både': 'Conj',
     'det_vill_säga': '',
@@ -252,24 +313,24 @@ conjtype_feat_map = {
     'mellan': 'Int',
     'men': 'Advs',
     'och': 'Conj',
-    'plus': 'Add',
-    'respektive': 'Dis',
-    'samt': 'Add',
+    'plus': 'Conj',
+    'respektive': 'Conj',
+    'samt': 'Conj',
     'som': 'Conj',
     'så': 'Cnsq',
-    'såväl': 'Add',
+    'såväl': 'Conj',
     'ty': 'Reas',
-    'utan': 'Exc',
-    'utom': 'Exc',
+    'utan': 'Advs',
+    'utom': 'Advs',
     'vare': 'Disj',
     'varken': 'Nnor',
 
-    # 'and': '',
-    # 'And': '',
+    'and': '',
+    'And': '',
 
 }
 
-conjtype_feat_map = {k: v if v else k for k,v in conjtype_feat_map.items()}
+conjtype_feat_map = {k: (v if v else k) for k,v in conjtype_feat_map.items()}
 
 if __name__ == '__main__':
     print(set(case_feat_map.keys()))
