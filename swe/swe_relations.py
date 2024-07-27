@@ -162,7 +162,7 @@ case_feat_map = {
     'för sedan': 'Tem',
     'i förhållande till': 'Cmp',
     'till skillnad från': 'Dsm',
-    'i linje med': 'Rpl',
+    'i linje med': 'Sem',
     
     '–': '',
     'fara': '',
@@ -275,7 +275,7 @@ marker_feat_map = {
     'över': 'The', # Funderar över, Glädjas över
 
     'för att': 'Cau',
-    'som om': 'Rpl',
+    'som om': 'Sem',
     'allt eftersom': 'Cau',
     'till dess': 'Ttr',
     'så att': 'Pur',

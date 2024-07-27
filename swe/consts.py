@@ -18,8 +18,12 @@ def make_splits(banks, all_banks, ud_dir):
 
 
 ## paths
-ud_dir = 'UD'
-banks = {'swe': ['PUD']}
+ud_dir = '/home/norrman/GitHub/morphosyntax/swe/UD'
+banks = {'swe': ['PUD', 'Talbanken', 'LinES']}
 all_banks = [bank for lang in banks for bank in banks[lang]]
 
 splits = make_splits(banks, all_banks, ud_dir)
+
+if __name__ == '__main__':
+    print(all_banks)
+    print(splits)
