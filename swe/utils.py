@@ -51,7 +51,7 @@ def verify_treeness(parse_list):
             new_list.append(node)
             new_ids.add(node['id'])
     for node in new_list:
-        if node['head'] and node['head'] not in new_ids:
+        if node['head'] is not None and node['head'] not in new_ids:
             return False
     return True
 

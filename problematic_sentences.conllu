@@ -1,4 +1,4 @@
-# error_type = VER
+# error_type = VER_14->13|25->13
 # sent_id = sv-ud-train-72
 # text = Det är till uppträdande i denna miljö som utbildningen närmast syftar - därav kravet på omedelbar och ovillkorlig lydnad och på noggrannhet redan i fredsutbildningen.
 1	Det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	4	expl	4:expl	_
@@ -29,7 +29,7 @@
 26	.	.	PUNCT	MAD	_	4	punct	4:punct	_
 
 
-# error_type = REL
+# error_type = REL_CASE_VERB_4->2
 # newpar id = P112.32
 # sent_id = sv-ud-train-607
 # text = Barntillsyn ordnas också genom
@@ -39,7 +39,7 @@
 4	genom	genom	ADP	PP	_	2	case	2:case	_
 
 
-# error_type = REL
+# error_type = REL_CASE_VERB_6->5
 # sent_id = sv-ud-train-802
 # text = Under färd skall flytvästen vara på.
 1	Under	under	ADP	PP	_	2	case	2:case	_
@@ -51,7 +51,7 @@
 7	.	.	PUNCT	MAD	_	5	punct	5:punct	_
 
 
-# error_type = REL
+# error_type = REL_CASE_VERB_3->2
 # newpar id = P117.13
 # sent_id = sv-ud-train-814
 # text = Att tänka på
@@ -60,7 +60,7 @@
 3	på	på	ADP	PP	_	2	case	2:case	_
 
 
-# error_type = REL
+# error_type = REL_CASE_VERB_5->4
 # newpar id = P124.7
 # sent_id = sv-ud-train-1203
 # text = Olika kurser att välja på
@@ -71,7 +71,7 @@
 5	på	på	ADP	PP	_	4	case	4:case	_
 
 
-# error_type = REL
+# error_type = REL_CASE_VERB_9->7
 # sent_id = sv-ud-train-1312
 # text = För att välja behöver du kanske veta mer om
 1	För	för	ADP	PP	_	3	mark	3:mark	_
@@ -85,7 +85,7 @@
 9	om	om	ADP	PP	_	7	case	7:case	_
 
 
-# error_type = VER
+# error_type = VER_6->1
 # newpar id = P201.29
 # sent_id = sv-ud-train-1405
 # text = Alltnog: i dessa kommitteer sitter ett par man från den mäktiga kommissionen.
@@ -105,7 +105,7 @@
 14	.	.	PUNCT	MAD	_	1	punct	1:punct	_
 
 
-# error_type = REL
+# error_type = REL_CASE_VERB_3->2
 # newpar id = P201.30
 # sent_id = sv-ud-train-1407
 # text = Vad händer med om vi blir med?
@@ -119,7 +119,7 @@
 8	?	?	PUNCT	MAD	_	2	punct	2:punct	_
 
 
-# error_type = VER
+# error_type = VER_20->21
 # newpar id = P203.16
 # sent_id = sv-ud-train-1564
 # text = Jag förmodar att du var förutseende nog i våras att du markerade hur dubbdäcken satt; höger fram, höger bak o s v .
@@ -148,7 +148,7 @@
 23	.	.	PUNCT	MAD	_	2	punct	2:punct	_
 
 
-# error_type = VER
+# error_type = VER_3->1
 # newpar id = P209.39
 # sent_id = sv-ud-train-1938
 # text = Tillbaka till riksvalet.
@@ -158,7 +158,7 @@
 4	.	.	PUNCT	MAD	_	1	punct	1:punct	_
 
 
-# error_type = VER
+# error_type = VER_6->1
 # sent_id = sv-ud-train-1959
 # text = Kanske - men uppgifterna är hämtade ur en statlig utredning.
 1	Kanske	kanske	ADV	AB	_	0	root	0:root	_
@@ -174,7 +174,7 @@
 11	.	.	PUNCT	MAD	_	1	punct	1:punct	_
 
 
-# error_type = VER
+# error_type = VER_12->1
 # newpar id = P212.26
 # sent_id = sv-ud-train-2037
 # text = Förenklat: de som kan äta en bastant grötfrukost tidigt är morgonmänniskor.
@@ -193,7 +193,7 @@
 13	.	.	PUNCT	MAD	_	1	punct	1:punct	_
 
 
-# error_type = VER
+# error_type = VER_1->2
 # sent_id = sv-ud-train-2171
 # text = Ända tills någon slagit på stora trumman i massmedia och 'skärrat upp' en opinion.
 1	Ända	ända	ADV	AB	_	2	advmod	2:advmod	_
@@ -215,7 +215,7 @@
 17	.	.	PUNCT	MAD	_	4	punct	4:punct	_
 
 
-# error_type = REL
+# error_type = REL_CASE_VERB_7->6
 # newpar id = P221.11
 # sent_id = sv-ud-train-2291
 # text = Förhandlingstrion som arbetar under Feldt består av:
@@ -229,7 +229,7 @@
 8	:	:	PUNCT	MAD	_	6	punct	6:punct	_
 
 
-# error_type = REL
+# error_type = REL_CASE_VERB_2->1
 # newpar id = P302.26
 # sent_id = sv-ud-train-2762
 # text = Fundera över
@@ -237,7 +237,7 @@
 2	över	över	ADP	PP	_	1	case	1:case	_
 
 
-# error_type = VER
+# error_type = VER_6->1|13->1
 # newpar id = P304.39
 # sent_id = sv-ud-train-3077
 # text = Förr * en kvinnas plats är i hemmet * en kvinnas uppgift är att vara maka, mor och husmor
@@ -263,7 +263,7 @@
 20	husmor	husmor	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	16	conj	13:ccomp|16:conj:och	_
 
 
-# error_type = VER
+# error_type = VER_4->1|21->1
 # newpar id = P304.42
 # sent_id = sv-ud-train-3078
 # text = Nu * hur förena de tre rollerna maka, mor och yrkeskvinna? * vilken fördelning av dessa roller är bäst för kvinnan själv, maken och barnen?
@@ -298,7 +298,7 @@
 29	?	?	PUNCT	MAD	_	21	punct	21:punct	_
 
 
-# error_type = VER
+# error_type = VER_5->1
 # newpar id = P304.45
 # sent_id = sv-ud-train-3079
 # text = Förr * han - yrkesman och familjeförsörjare * på fritid helt befriad från s.k. fruntimmerssysslor
@@ -319,7 +319,7 @@
 15	fruntimmerssysslor	fruntimmerssyssla	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	12	obl	12:obl:från	_
 
 
-# error_type = VER
+# error_type = VER_4->1|21->1
 # newpar id = P304.48
 # sent_id = sv-ud-train-3080
 # text = Nu * hur förena de tre rollerna make, far och yrkesman? * vilken fördelning av dessa roller är bäst för honom själv, hustrun och barnen?
@@ -354,7 +354,7 @@
 29	?	?	PUNCT	MAD	_	21	punct	21:punct	_
 
 
-# error_type = REL
+# error_type = REL_CASE_VERB_27->22
 # newpar id = P306.15
 # sent_id = sv-ud-train-3249
 # text = Om flickornas upplevelse av föräldrarnas inställning var riktig eller om den också hade påverkats av traditionella könsrollsförväntningar hos flickorna själva, säger ju siffrorna inte något om.
@@ -388,7 +388,7 @@
 28	.	.	PUNCT	MAD	_	22	punct	22:punct	_
 
 
-# error_type = VER
+# error_type = VER_19->18|20->18
 # sent_id = sv-ud-train-4205
 # text = Enkelt uttryckt - och för tillfället med bortseende från alla komplikationer - måste uppmaningen från kristet håll till två människor, som vet att de vill hålla ihop, bli: gift er!
 1	Enkelt	enkel	ADV	AB|POS	Degree=Pos	2	advmod	2:advmod	_
@@ -427,7 +427,7 @@
 34	!	!	PUNCT	MAD	_	32	punct	32:punct	_
 
 
-# error_type = VER
+# error_type = VER_3->1
 # newpar id = P413.17
 # sent_id = sv-ud-dev-325
 # text = Likadant med utlänningarna.
@@ -437,7 +437,7 @@
 4	.	.	PUNCT	MAD	_	1	punct	1:punct	_
 
 
-# error_type = VER
+# error_type = VER_18->19
 # sent_id = sv-ud-test-137
 # text = För 6000 år sedan fanns det städer i Egypten, i Mesopotamien och i Indusdalen - 5000 år innan stadskulturen började utvecklas i Sverige.
 1	För	för	ADP	PP	_	3	case	3:case	_
@@ -467,7 +467,7 @@
 25	.	.	PUNCT	MAD	_	5	punct	5:punct	_
 
 
-# error_type = VER
+# error_type = VER_19->20
 # sent_id = sv-ud-test-344
 # text = Vi har inte sett några symtom, men det skrämmande är att vårt öde kanske är beseglat tjugo år innan symtomen framträder.
 1	Vi	vi	PRON	PN|UTR|PLU|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs	4	nsubj	4:nsubj	_
@@ -495,7 +495,7 @@
 23	.	.	PUNCT	MAD	_	4	punct	4:punct	_
 
 
-# error_type = VER
+# error_type = VER_9->10|12->10
 # sent_id = sv-ud-test-573
 # text = Röret leds sedan ner under huden på halsen vidare in i en av halsvenerna och får utmynna i hjärtats högra förmak.
 1	Röret	rör	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	2	nsubj:pass	2:nsubj:pass|10:nsubj:pass|17:nsubj:pass	_
@@ -522,7 +522,7 @@
 22	.	.	PUNCT	MAD	_	2	punct	2:punct	_
 
 
-# error_type = VER
+# error_type = VER_11->9
 # sent_id = sv-ud-test-616
 # text = Den leds vidare under huden bakom örat, in i en av halsvenerna och utmynnar i hjärtat.
 1	Den	den	PRON	PN|UTR|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Com|Number=Sing|PronType=Prs	2	nsubj:pass	2:nsubj:pass|15:nsubj:pass	_
@@ -545,7 +545,7 @@
 18	.	.	PUNCT	MAD	_	2	punct	2:punct	_
 
 
-# error_type = VER
+# error_type = VER_3->1
 # sent_id = sv-ud-test-953
 # text = Här en veterinärstation i Afganistan, där bönderna får sin boskap vaccinerad.
 1	Här	här	ADV	AB	_	0	root	0:root	_
@@ -563,7 +563,7 @@
 13	.	.	PUNCT	MAD	_	1	punct	1:punct	_
 
 
-# error_type = VER
+# error_type = VER_15->12
 # sent_id = sv_lines-ud-train-doc1-20
 # text = Begränsa antalet rader som en fråga returnerar genom att använda villkoret LIMIT TO nn ROWS
 # text_en = Using the LIMIT TO nn ROWS clause to limit the number of rows returned by a query
@@ -584,7 +584,7 @@
 15	ROWS	rows	NOUN	PL-FGN	_	12	nmod	_	_
 
 
-# error_type = VER
+# error_type = VER_31->32|36->32|41->32
 # sent_id = sv_lines-ud-train-doc1-127
 # text = Vanligen skapar en utvecklare en XSL-transformationsfil som när den används under exporten av ett XML-dokument tolkar eller överför XML-informationen till ett presentationsformat som kan tolkas av ett annat program, t.ex SAP (Service Advertising Protocol) eller ett anpassat kundorderformat.
 # text_en = Typically, a developer creates an XSL transformation file that, when applied to an XML document during export, interprets or transforms the XML data into a presentation format that can be recognized by another application, such as Service Advertising Protocol (SAP) or a custom purchase order format.
@@ -632,7 +632,7 @@
 42	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_2->1|4->1|8->9
 # sent_id = sv_lines-ud-train-doc1-289
 # text = SELECT asterisk FROM Kunder WHERE Land Like U %
 # text_en = SELECT asterisk FROM Customers WHERE Country Like U %
@@ -647,7 +647,7 @@
 9	%	%	SYM	_	_	7	obj	_	_
 
 
-# error_type = VER
+# error_type = VER_14->15
 # sent_id = sv_lines-ud-train-doc1-290
 # text = Denna fråga returnerar alla kunder från ett land eller en region som heter U %, inte alla länder eller regioner med begynnelsebokstaven U, eftersom procenttecken (%) inte är ett jokertecken i ANSI-89 SQL.
 # text_en = It returns all customers from a (country|region) named "U % ", not all (countries|regions) beginning with the letter "U ", because the percent sign (%) is not a wildcard character in ANSI-89 SQL.
@@ -691,7 +691,7 @@
 38	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_5->1
 # sent_id = sv_lines-ud-train-doc2-377
 # text = Vilse inte bara i staden utan även inom sig själv.
 # text_en = Lost, not only in the city, but within himself as well.
@@ -708,7 +708,7 @@
 11	.	.	PUNCT	Period	_	1	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->2
 # sent_id = sv_lines-ud-train-doc2-395
 # text = Allt eftersom tiden gick upptäckte han emellertid att han gjorde allt för att imitera en man som förberedde sig för att gå ut.
 # text_en = Nevertheless, as time wore on he found himself doing a good imitation of a man preparing to go out.
@@ -738,7 +738,7 @@
 24	.	.	PUNCT	Period	_	5	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->2
 # sent_id = sv_lines-ud-train-doc2-536
 # text = Allt eftersom dagarna gick antecknade Quinn ett hopfällbart paraply utan tyg, ett avslitet huvud till en gummidocka, en svart handske, foten till en trasig glödlampa, olika slags tryckalster (uppblötta veckotidningar, sönderrivna tidningar), ett trasigt fotografi, anonyma mekaniska delar samt diverse annat vrakgods som han inte kunde identifiera.
 # text_en = Over the days that passed, Quinn noted a collapsible umbrella shorn of its material, the severed head of a rubber doll, a black glove, the bottom of a shattered light bulb, several pieces of printed matter (sogged magazines, shredded newspapers), a torn photograph, anonymous machinery parts, and sundry other clumps of flotsam he could not identify.
@@ -801,7 +801,7 @@
 57	.	.	PUNCT	Period	_	5	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_6->3|8->3
 # sent_id = sv_lines-ud-train-doc2-637
 # text = Han var i trettiofemårsåldern, lång och mörk med skrynkliga kläder och två dagar gammal skäggstubb.
 # text_en = He was a tall dark fellow in his mid-thirties, with rumpled clothes and a two-day beard.
@@ -824,7 +824,7 @@
 17	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->2
 # sent_id = sv_lines-ud-train-doc2-709
 # text = Just när han öppnade munnen avbröts han av klirret av nycklar i ytterdörren, ljudet av dörren som öppnades och sedan slogs igen med en smäll och glada, livliga röster.
 # text_en = Just as he opened his mouth to speak, he was interrupted by a clattering of keys at the front door, the sound of the door opening and then slamming shut, and a burst of voices.
@@ -862,7 +862,7 @@
 32	.	.	PUNCT	Period	_	6	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_18->16
 # sent_id = sv_lines-ud-train-doc3-891
 # text = Men jag kan inte utsätta honom för alltför många chocker på en enda gång, så jag säger: "Hon har inte fått en judisk uppfostran."
 # text_en = But I can't give him too many shocks at once, and I say, "She has not had a Jewish upbringing."
@@ -897,7 +897,7 @@
 29	"	"	PUNCT	Quote	_	24	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_5->6
 # sent_id = sv_lines-ud-train-doc3-1064
 # text = De herodiska relikerna är precis som reliker ska vara misshandlade pelare, hårt bearbetade av tiden, Absaloms grav med sitt lökformade tak som en egendomlig, avsmalnande skorsten sticker upp ur.
 # text_en = The Herodian relics are all that relics should be columns distorted, well worked over by time, Absalom's tomb with its bulbous roof and odd funnel tapering out of it.
@@ -936,7 +936,7 @@
 33	.	.	PUNCT	Period	_	11	punct	_	_
 
 
-# error_type = TAM
+# error_type = TAM_MULTIPLE_vara_2-15
 # sent_id = sv_lines-ud-train-doc3-1179
 # text = skillnaden är bara att när en bomb exploderar på en restaurang i West End är det inte Englands fundamentala rätt att existera som sätts i fråga.
 # text_en = the difference is that when a bomb goes off in a West End restaurant the fundamental right of England to exist is not in dispute.
@@ -969,7 +969,7 @@
 27	.	.	PUNCT	Period	_	20	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_26->22|36->22
 # sent_id = sv_lines-ud-train-doc4-1308
 # text = Men där fanns inom den en särskild flod, en väldig flod som på kartan liknade en utrullad orm med huvudet i havet, kroppen vilande i slingor tvärs över ett stort land och stjärten dold i kontinentens innandömen.
 # text_en = But there was in it one river especially, a mighty big river, that you could see on the map, resembling an immense snake uncoiled, with its head in the sea, its body at rest curving afar over a vast country, and its tail lost in the depths of the land.
@@ -1015,7 +1015,7 @@
 40	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_7->4
 # sent_id = sv_lines-ud-train-doc4-1404
 # text = Klippan var inte i vägen eller någonting, men detta meningslösa sprängande var den enda verksamhet som pågick.
 # text_en = The cliff was not in the way or anything; but this objectless blasting was all the work going on.
@@ -1040,7 +1040,7 @@
 19	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_16->15
 # sent_id = sv_lines-ud-train-doc4-1443
 # text = Jag tror att jag gör det nu, fast säker är jag inte – inte alls.
 # text_en = I fancy I see it now, but I am not sure – not at all.
@@ -1063,7 +1063,7 @@
 17	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_16->17
 # sent_id = sv_lines-ud-train-doc4-1459
 # text = Det var omedvetet, det där leendet, men det djupnade alltid för ett ögonblick just som han hade sagt något.
 # text_en = It was unconscious, this smile was, though just after he had said something it got intensified for an instant.
@@ -1091,7 +1091,7 @@
 22	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_2->3
 # sent_id = sv_lines-ud-train-doc5-1589
 # text = Och särskilt när man hävdar att motorerna är miljövänliga eftersom de förbrukar mindre bränsle kan man inte göra några undantag.
 # text_en = It is precisely when engines are claimed to be environment-friendly because they consume less fuel that we can not make any exceptions.
@@ -1118,7 +1118,7 @@
 21	.	.	PUNCT	Period	_	18	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_3->1
 # sent_id = sv_lines-ud-train-doc5-1594
 # text = Och det är naturligt att i delegationen för republiken Cyperns lagliga och internationellt erkända regering även turkcyprioter kommer att kunna deltaga.
 # text_en = Naturally, the Turkish Cypriots will have a place in the representation of the lawful and internationally recognized government of Cyprus.
@@ -1146,7 +1146,7 @@
 22	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_3->1
 # sent_id = sv_lines-ud-train-doc5-1669
 # text = Men det är en av de äldsta olägenhetslagstiftningarna som vi har i Europa.
 # text_en = And this is one of the oldest pieces of environmental legislation that we have in Europe.
@@ -1166,7 +1166,7 @@
 14	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_6->5
 # sent_id = sv_lines-ud-train-doc5-1688
 # text = Men det är ju inte direkt dessa ord man till vardags använder inför den undrande befolkningen i EU-länderna.
 # text_en = But that is not the language used in everyday encounters with the bemused populations of the EU countries.
@@ -1191,7 +1191,7 @@
 19	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_17->18
 # sent_id = sv_lines-ud-train-doc5-1703
 # text = Principen enligt vilken nyttofordon skall genomgå årliga tekniska kontroller vid godkända testcentrer har uppnåtts i direktivet 96/96 EEG.
 # text_en = Directive 96/96/EC established the principle that commercial road vehicles must undergo an annual roadworthiness test at an approved testing centre.
@@ -1216,7 +1216,7 @@
 19	.	.	PUNCT	Period	_	14	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_18->5
 # sent_id = sv_lines-ud-train-doc5-1846
 # text = Vi kommer att tala om nya trender när det gäller konsumtion och handel samt hur den utvecklingen ser ut.
 # text_en = We shall be discussing the new trends in consumption and trafficking and the prospects for the future.
@@ -1242,7 +1242,7 @@
 20	.	.	PUNCT	Period	_	4	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_3->1
 # sent_id = sv_lines-ud-train-doc5-1899
 # text = Men det finns en möjlighet att järnvägen får uppleva en renässans, och det är detta vi skall gå efter.
 # text_en = But the opportunity for the renaissance of the railways is at hand, and that is what we should strive for.
@@ -1269,7 +1269,7 @@
 21	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->2
 # sent_id = sv_lines-ud-train-doc6-1940
 # text = Ända sedan han definitivt lämnade Afrika för tio år sedan hade han uppehållit nära förbindelser med Adamson Mweta och de andra ledarna av den afrikanska självständighetsrörelsen.
 # text_en = He had kept up, since he finally left Africa ten years ago, a close contact with Adamson Mweta and the other leaders of the African independence movement.
@@ -1302,7 +1302,7 @@
 27	.	.	PUNCT	Period	_	13	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_12->13
 # sent_id = sv_lines-ud-train-doc6-2139
 # text = Och dessutom kommer jag att beordra statsåklagaren att inskrida fast jag helst inte hade velat det.
 # text_en = And I'll be instructing the State Prosecutor to act when I'd rather not, too.
@@ -1325,7 +1325,7 @@
 17	.	.	PUNCT	Period	_	6	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_28->22
 # sent_id = sv_lines-ud-train-doc6-2162
 # text = En helikopter snarkade fram över festligheterna, dränkte utväxlandet av hälsningar när Bray föreställdes för någon på gatan, utplånade samtal på pubar och till och med anföranden.
 # text_en = A helicopter snored over the celebrations, drowning the exchange of greetings when Bray was introduced to someone in the street, expunging conversation in bars and even speeches.
@@ -1360,7 +1360,7 @@
 29	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_3->4
 # sent_id = sv_lines-ud-train-doc6-2238
 # text = Nja, nästan på... Jag måste i varje fall ha druckit hundratals koppar kaffe...
 # text_en = Oh, not quite... I must have had hundreds of cups of coffee.
@@ -1382,7 +1382,7 @@
 16	...	...	PUNCT	Dots	_	12	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_17->18
 # sent_id = sv_lines-ud-train-doc6-2240
 # text = Kocken gav sig i väg för att vara med på självständighetsfesten, och sen dess har vi inte sett till honom... bara en liten stund på eftermiddan, sa han, bara för att titta på alla storheter som man har sett i tidningarna... tja, vad skulle man säga?
 # text_en = The cook went to the Independence ceremony and we haven't seen him since... just for the afternoon, he said, just to see the great men he's seen in the papers... well, what can you say?
@@ -1441,7 +1441,7 @@
 53	?	?	PUNCT	QuestionMark	_	52	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_30->31
 # sent_id = sv_lines-ud-train-doc6-2253
 # text = Jag fick honom från arbetsförmedlingen... jag tänkte, för all del, vi kan ju alltid försöka, så dom skickade över honom. Fem års praktik. Allting prima.
 # text_en = I got him from the new labour exchange – I thought, well, let's try it, so they send him along, five years' experience, everything fine.
@@ -1479,7 +1479,7 @@
 32	.	.	PUNCT	Period	_	31	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_11->12
 # sent_id = sv_lines-ud-train-doc6-2256
 # text = Ni vet dom där barberarna under mangoträden där borta, alldeles innan man kommer till fattigbasaren?
 # text_en = You know the barbers under the mango trees there just before you get to the second-class trading area?
@@ -1502,7 +1502,7 @@
 17	?	?	PUNCT	QuestionMark	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_3->1
 # sent_id = sv_lines-ud-train-doc6-2309
 # text = Ner med neokolonialismen!
 # text_en = Down with neo-colonialism.
@@ -1512,7 +1512,7 @@
 4	!	!	PUNCT	ExclMark	_	1	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_21->22
 # sent_id = sv_lines-ud-train-doc6-2363
 # text = Men när Neil, Bray, Evelyn Odara och sydafrikanen slutligen hade tagit sig ner till fattigbasaren hade de andra ännu inte kommit.
 # text_en = But when Neil, Bray, Evelyn Odara and the South African got down to the second-class trading area, the others hadn't arrived.
@@ -1542,7 +1542,7 @@
 24	.	.	PUNCT	Period	_	23	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_4->5
 # sent_id = sv_lines-ud-train-doc7-2459
 # text = Harry rusade upp just som en hånfull röst kom svävande över gräsmattan.
 # text_en = Harry jumped to his feet just as a jeering voice floated across the lawn.
@@ -1561,7 +1561,7 @@
 13	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_6->7
 # sent_id = sv_lines-ud-train-doc7-2529
 # text = Harry störtade tillbaka genom rummet just som ljuset ute på trappavsatsen tändes.
 # text_en = Harry tore back across the room as the landing light clicked on.
@@ -1580,7 +1580,7 @@
 13	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->2|5->2|8->2|23->2|34->2
 # sent_id = sv_lines-ud-train-doc7-2593
 # text = Bilen borta kunde ha kraschat Alldeles ifrån mig av oro det brydde ni er väl inte om? Aldrig i hela mitt liv vänta ni bara tills pappa kommer hem Såna här bekymmer hade vi aldrig med Bill eller Charlie eller Percy"
 # text_en = Car gone could have crashed out of my mind with worry did you care? never, as long as I've lived you wait until your father gets home, we never had trouble like this from Bill or Charlie or Percy
@@ -1629,7 +1629,7 @@
 43	"	"	PUNCT	Quote	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_18->19
 # sent_id = sv_lines-ud-train-doc7-2636
 # text = Men det värsta var att den mörka, trånga gatan som Harry såg genom det dammiga butiksfönstret definitivt inte var Diagongränden.
 # text_en = Even worse, the dark, narrow street Harry could see through the dusty shop window was definitely not Diagon Alley.
@@ -1657,7 +1657,7 @@
 22	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_27->23
 # sent_id = sv_lines-ud-train-doc7-2670
 # text = Harry väntade en minut för den händelse han skulle komma tillbaka och smög sedan så tyst han kunde ut ur skåpet, förbi glasmontrarna och vidare ut genom butiksdörren.
 # text_en = Harry waited for a minute in case he came back, then, quietly as he could, slipped out of the cabinet, past the glass cases, and out of the shop door.
@@ -1693,7 +1693,7 @@
 30	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_13->14
 # sent_id = sv_lines-ud-train-doc8-3031
 # text = Jag skulle vilja övertyga mig själv om mig själv men det kan jag inte.
 # text_en = I would like to convince myself about myself but I cannot.
@@ -1714,7 +1714,7 @@
 15	.	.	PUNCT	Period	_	4	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_3->4
 # sent_id = sv_lines-ud-train-doc8-3174
 # text = Han tänkte absolut inte bedriva sodomi med sin egen hustru.
 # text_en = He would not sodomise his own wife.
@@ -1731,7 +1731,7 @@
 11	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->2
 # sent_id = sv_lines-ud-train-doc8-3176
 # text = Allt eftersom hans värld mörknade lade sig skuggorna över vårt hus.
 # text_en = As his world darkened, the shadows in our house increased.
@@ -1749,7 +1749,7 @@
 12	.	.	PUNCT	Period	_	6	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_31->32
 # sent_id = sv_lines-ud-dev-doc3-3513
 # text = Den 3 juli 1976, innan Israel hade befriat gisslan i Entebbe, påpekade tidningen med en viss belåtenhet att Amin, "den oroande marskalken" som alla talade så illa om, nu hade blivit sina dåraktiga baktalares stöd och hopp.
 # text_en = On July 3, 1976, before Israel had freed the hostages at Entebbe, the paper observed with some satisfaction that Amin, "the disquieting Marshal," maligned by everyone, had now become the support and the hope of his foolish detractors.
@@ -1799,7 +1799,7 @@
 44	.	.	PUNCT	Period	_	14	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->2
 # sent_id = sv_lines-ud-dev-doc5-3775
 # text = Ända sedan jag kom till parlamentet har vi sysslat med denna fråga.
 # text_en = We have been discussing this subject ever since I have been in Parliament.
@@ -1818,7 +1818,7 @@
 13	.	.	PUNCT	Period	_	9	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_56->57
 # sent_id = sv_lines-ud-dev-doc6-3866
 # text = Du kan ju ta och fråga Mweta om du får en chans att tala med honom, fråga om han inte tänker försöka hitta på något litet struntjobb åt honom nånstans, nånting med en snygg och prydlig etikett på, åt stackars gamla Shinza, han som bankade på kolonialministerns dörr med en panga redan medan Mweta var en liten snorunge som satt och sjöng psalmer oppe i missionsskolan.
 # text_en = You might ask Mweta, if you get a chance to talk to him, ask him if he isn't going to find a piddling little job somewhere, something with a decent label to it, for poor old Shinza, he was banging on the Colonial Secretary's door with a panga while Mweta was a snotty picannin singing hymns up at the mission school.
@@ -1895,7 +1895,7 @@
 71	.	.	PUNCT	Period	_	4	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_30->20|41->20
 # sent_id = sv_lines-ud-dev-doc6-3903
 # text = ... jag skulle kunna ge er dussintals exempel på hur det går till... ceremonin i eftermiddags: precis som en hästkapplöpning kan jag försäkra... arrangemangen var alldeles likadana som vid stora julderbyt för välgörande ändamål. Men jag frågar: kan dom över huvud taget nåt annat?
 # text_en = I could give you a dozen examples of the sort of thing that happens – the ceremony this afternoon: like a horse-race, man – the arrangements were exactly what they used to use for the charity Christmas Handicap, what else do they know?
@@ -1951,7 +1951,7 @@
 50	?	?	PUNCT	QuestionMark	_	43	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_7->1
 # sent_id = sv_lines-ud-dev-doc6-3909
 # text = Inte om man i förväg har ordnat med efterträdare.
 # text_en = not if there's no preparation of replacements being done in the meantime.
@@ -1967,7 +1967,7 @@
 10	.	.	PUNCT	Period	_	1	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_3->1
 # sent_id = sv_lines-ud-dev-doc7-4000
 # text = Högaktningsfullt, Mafalda Hopkirk
 # text_en = Yours sincerely, Mafalda Hopkirk
@@ -1977,7 +1977,7 @@
 4	Hopkirk	Hopkirk	PROPN	SG-NOM	Case=Nom	3	flat	_	_
 
 
-# error_type = VER
+# error_type = VER_2->3
 # sent_id = sv_lines-ud-dev-doc7-4062
 # text = "Bara så att du kunde fortsätta att mixtra med allt det där mugglarskräpet ute i skjulet!
 # text_en = Just so you could carry on tinkering with all that Muggle rubbish in your shed!
@@ -2001,7 +2001,7 @@
 18	!	!	PUNCT	ExclMark	_	7	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_22->23
 # sent_id = sv_lines-ud-dev-doc8-4119
 # text = Jag tänkte på min ofta-dröm, där Tiden öste ut fisken över himlen och himlen fylldes av stjärnfisk; de högre sfärernas stella maris.
 # text_en = I thought of my often-dream where Time poured the fishes into the sky and the sky was full of star fish; stella maris of the upper air.
@@ -2032,7 +2032,7 @@
 25	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_22->17
 # sent_id = sv_lines-ud-test-doc1-4239
 # text = Om diagrammet till exempel summerar försäljningsintäkter, och källdatan dessutom inkluderar försäljningsmängd, kan du lägga till fältet Kvantitet som ett datafält. Då summeras både intäkterna och mängden produkter som sålts.
 # text_en = For example, if the chart summarizes sales revenue, and the source data also includes sales quantities, you might add the Quantity field as a data field to summarize both revenue and quantity of products sold.
@@ -2071,7 +2071,7 @@
 33	.	.	PUNCT	Period	_	25	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_3->1
 # sent_id = sv_lines-ud-test-doc2-4354
 # text = Visst, svarade mannen.
 # text_en = Yeah, said the counterman.
@@ -2082,7 +2082,7 @@
 5	.	.	PUNCT	Period	_	1	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->2
 # sent_id = sv_lines-ud-test-doc2-4455
 # text = Just precis.
 # text_en = Exactly.
@@ -2091,7 +2091,7 @@
 3	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_15->16
 # sent_id = sv_lines-ud-test-doc4-4640
 # text = Hur som helst var det genom denna gloriösa affär som jag fick min anställning långt innan jag alls hade börjat hoppas på den.
 # text_en = However, through this glorious affair I got my appointment, before I had fairly begun to hope for it.
@@ -2121,7 +2121,7 @@
 24	.	.	PUNCT	Period	_	4	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_19->20
 # sent_id = sv_lines-ud-test-doc4-4650
 # text = Den smala reste sig och kom emot mig – alltjämt stickande och med ögonen på arbetet – och först när jag började tänka på att gå ur vägen för henne som för en sömngångare stannade hon och såg upp. Hennes klänning var snäv och slät som ett paraplyfodral och hon vände sig utan ett ord och gick före mig in i ett väntrum.
 # text_en = The slim one got up and walked straight at me – still knitting with downcast eyes – and only just as I began to think of getting out of her way, as you would for a somnambulist, stood still, and looked up. Her dress was as plain as an umbrella-cover, and she turned round without a word and preceded me into a waiting-room.
@@ -2192,7 +2192,7 @@
 65	.	.	PUNCT	Period	_	44	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->3|4->3|6->3
 # sent_id = sv_lines-ud-test-doc4-4677
 # text = Nej, inte än, svarade han med orubbligt lugn.
 # text_en = 'No, not yet,' he answered, with great composure.
@@ -2209,7 +2209,7 @@
 11	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_12->14|13->14
 # sent_id = sv_lines-ud-test-doc4-4704
 # text = Jag såg då inte till vare sig väg eller underhåll, för så vitt inte liket efter en medelålders neger med ett kulhål i pannan som jag bokstavligen snavade över fem kilometer längre fram kan betraktas som en varaktig förbättring.
 # text_en = Can't say I saw any road or any upkeep, unless the body of a middle-aged negro, with a bullet-hole in the forehead, upon which I absolutely stumbled three miles farther on, may be considered as a permanent improvement.
@@ -2256,7 +2256,7 @@
 41	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_6->1
 # sent_id = sv_lines-ud-test-doc4-4708
 # text = För att tjäna pengar så klart.
 # text_en = 'To make money, of course.'
@@ -2269,7 +2269,7 @@
 7	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_6->5
 # sent_id = sv_lines-ud-test-doc5-4842
 # text = Dessutom anser jag att inte heller alla regionala instanser är i stånd att ta kontakt med kommissionen.
 # text_en = I also believe that the regional authorities are not all in a position to establish contacts with the Commission.
@@ -2293,7 +2293,7 @@
 18	.	.	PUNCT	Period	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_1->2
 # sent_id = sv_lines-ud-test-doc6-4897
 # text = Jaså verkligen?
 # text_en = Oh have you?
@@ -2302,7 +2302,7 @@
 3	?	?	PUNCT	QuestionMark	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_5->1
 # sent_id = sv_lines-ud-test-doc6-4898
 # text = Nyligen – eller som barn?
 # text_en = Recently or when you were a child?
@@ -2314,7 +2314,7 @@
 6	?	?	PUNCT	QuestionMark	_	1	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_11->12
 # sent_id = sv_lines-ud-test-doc6-4925
 # text = Fågeln hade gett sig iväg; han visste det, nästan som om klornas fjäderlätta tyngd hade tryckt ner taket och trycket nu hade lättat.
 # text_en = The bird was gone; he knew, almost as if the breath's weight of claws had pressed down the roof and now the pressure was released.
@@ -2346,7 +2346,7 @@
 26	.	.	PUNCT	Period	_	3	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_14->13
 # sent_id = sv_lines-ud-test-doc6-4955
 # text = Han vet vad han vill, men han är inte omedgörlig, inte alls...
 # text_en = He knows his own mind but he's not an intransigent fellow at all...
@@ -2367,7 +2367,7 @@
 15	...	...	PUNCT	Dots	_	2	punct	_	_
 
 
-# error_type = VER
+# error_type = VER_15->16
 # sent_id = sv_lines-ud-test-doc7-5116
 # text = "Vi måste köpa lite mer i dag nåja, strunt i det. Gästerna först!
 # text_en = We'll have to buy some more today ah well, guests first!

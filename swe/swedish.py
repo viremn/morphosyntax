@@ -50,7 +50,7 @@ def get_relation_feats(relation_nodes: list[conllu.Token], verb=True, clause=Fal
     cc_nodes = [node for node in relation_nodes if node['deprel'] == 'cc']
 
     if case_nodes and verb:
-        return None
+        return f"REL_CASE_VERB_{'|'.join([str(n['id'])+'->'+str(n['head']) for n in case_nodes])}"
 
     remaining_nodes = [node for node in relation_nodes if node not in case_nodes and node not in marker_nodes and node not in cc_nodes]
 
@@ -153,7 +153,9 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'bli' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'bli']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1:
+            print(node) 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
 
         feats['Voice'] = 'Pass'
@@ -168,7 +170,9 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'få' in aux_lemmas: # Nec or Prms
         node = [node for node in aux_nodes if node['lemma'] == 'få']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text'])
+        if len(node) != 1:
+            print(node) 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text'])
         node = node[0]
 
         modality += ',Prms' # Oklart om den finns
@@ -183,7 +187,9 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'vara' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'vara']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1:
+            print(node) 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
 
         if node['feats'].get('VerbForm', None) == 'Sup':
@@ -197,7 +203,8 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'komma' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'komma']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1: 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
 
         if node['feats'].get('VerbForm', None) == 'Sup':
@@ -227,7 +234,8 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'böra' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'böra']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1: 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
 
         modality += ',Nec'
@@ -240,7 +248,8 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'behöva' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'behöva']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1: 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
 
         modality += ',Nec' 
@@ -256,7 +265,8 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'kunna' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'kunna']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1: 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
 
         modality += ',Pot'
@@ -280,7 +290,8 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'vilja' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'vilja']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1: 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
 
         modality += ',Des'
@@ -296,7 +307,8 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'må' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'må']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1: 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
         
         modality += ',Pot' # or maybe Jus/Prms/Opt?
@@ -309,7 +321,8 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'skola' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'skola']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1: 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
 
         if node['feats'].get('VerbForm', None) == 'Fin':
@@ -320,7 +333,8 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if 'ha' in aux_lemmas:
         node = [node for node in aux_nodes if node['lemma'] == 'ha']
-        if len(node) != 1: return None # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
+        if len(node) != 1: 
+            return f"TAM_MULTIPLE_{node[0]['lemma']}_{'-'.join([str(n['id']) for n in node])}" # assert len(node) == 1, (parse_list.metadata['sent_id'], parse_list.metadata['text']) 
         node = node[0]
 
         if 'Perf' not in feats['Aspect']:
@@ -353,6 +367,8 @@ def get_nTAM_feats(aux_nodes: list[conllu.Token],
 
     if aux_lemmas:
         print(aux_nodes, parse_list.metadata['sent_id'])
+        untreated_node = [node['id'] for node in aux_nodes if node['lemma'] in aux_lemmas]
+        return f"TAM_UNTREATED_{'-'.join(untreated_node)}"
         raise ValueError(f'untreated auxiliaries. their lemmas: {aux_lemmas}')
 
     feats = {k: ','.join(sorted(list(set([i for i in v.split(',') if i])))) for k, v in feats.items() if v}
@@ -392,8 +408,6 @@ def check_fixed(node):
     children = [child for child in parse_list if node['id'] == child['head'] and child['deprel'] == 'fixed']
     return True if len(children) else False
 
-    
-
 def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
 
     # remove children that are not of interest
@@ -421,9 +435,9 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
 
     if TAM_nodes:
         TAM_feats = get_nTAM_feats(TAM_nodes, head['feats'], children, is_verb)
-        if TAM_feats is not None:
+        if isinstance(TAM_feats, dict):
             head['ms feats'].update(TAM_feats)
-        else: return 'TAM'
+        else: return TAM_feats
 
         if not head['ms feats'].get('Mood', None): head['ms feats']['Mood'] = 'Ind'
         if not head['ms feats'].get('Polarity', None): head['ms feats']['Polarity'] = 'Pos'
@@ -441,9 +455,9 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
     
     if relation_nodes:
         to_update = get_relation_feats(relation_nodes, verb=is_verb, clause=head['deprel'] in clausal_rels)
-        if to_update is not None:
+        if isinstance(to_update, dict):
             head['ms feats'].update(to_update)
-        else: return 'REL'
+        else: return to_update
     
     if set_nodes(TAM_nodes) & set_nodes(relation_nodes):
         for id in set_nodes(TAM_nodes) & set_nodes(relation_nodes):
@@ -576,6 +590,21 @@ def apply_grammar(head: conllu.Token, children: list[conllu.Token]):
 
     del head['fixed lemma']
 
+def find_missing_head(parse_list):
+    parse_list = deepcopy(parse_list)
+    new_list = []
+    new_ids = {0}
+
+    problem_nodes = []
+
+    for node in parse_list:
+        if node['ms feats']:
+            new_list.append(node)
+            new_ids.add(node['id'])
+    for node in new_list:
+        if node['head'] not in new_ids:
+            problem_nodes.append(f"{node['id']}->{node['head']}")
+    return '|'.join(problem_nodes)
 
 if __name__ == '__main__':
     problematic = []
@@ -654,10 +683,13 @@ if __name__ == '__main__':
                             outfile.write(to_write + '\n')
                         
                         elif not error:
-                            error = 'VER'
+                            error = f'VER_{find_missing_head(parse_list)}'
                         
                         if error:
+                            
+                            print('FOUND ERROR', error)
                             problematic.append((error, parse_list))    
+
 
     with open('problematic_sentences.conllu', 'w') as f:
         for error, parse_list in problematic:
