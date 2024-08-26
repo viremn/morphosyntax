@@ -14,7 +14,21 @@ def span(parse_tree):
     while waiting_list:
         curr = waiting_list[0]
         if curr.children:
-            res.append([curr.token['id'], [child.token['id'] for child in curr.children]])
+            children = []
+            for child in curr.children:
+                if child.token['deprel'] != 'conj':
+                    children.append(child)
+                if child.children:
+                    for c in child.children:
+                        if c.token['deprel'] == 'conj':
+                            print('token:', c.token['form'])
+                            print('original head:', child.token['form'])
+                            print('new head:', curr.token['form'])
+                            children.append(c)
+            
+            children = sorted([child.token['id'] for child in children])
+            if children:
+                res.append([curr.token['id'], children])
             waiting_list += curr.children
         waiting_list = waiting_list[1:]
     return res

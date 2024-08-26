@@ -1,0 +1,31 @@
+This directory contains a preliminary script to convert the Swedish UD treebanks into a morphosyntactic annotation scheme. It requires the 'conllu' package to be installed:
+
+    pip install conllu
+
+To execute the script you simply run the 'swedish.py' script:
+
+    python3 swedish.py
+
+To run the script, you may have to make adjustments to the 'consts.py' file. 
+To specify where the main script should retrieve the data from, set the 'ud_dir' variable to the directory where the tree bank files are stored. The main script supposes that the treebank files are stored in a directory of the following structure:
+    UD/{lang}/{Treebank-name}/{file-name}.connlu
+
+The resulting output of the script is stored in an identically structured directory with 'UD+' as the parent directory rather than 'UD':
+    UD+/{lang}/{Treebank-name}/{file-name}.connlu
+
+The 'banks' variable is a dictionary containing the treebank names and languages.
+    {lang: [Treebank-name1, Treebank-name2]}
+
+
+The 'utils.py' file contains a set of helper function for verifying the trees and spans during the conversion process. 
+
+'swe_relations.py' contains mapping dictionaries between preposition lemmas and case/mark/cc relational features.
+
+The main script first reads the treebank files and stores them as lists of trees, which in turn are lists of tokens. Each tree is searched through and all nodes with children and their children are extracted. Thereafter, auxiliary verbs and particles are indentified. From the auxiliary nodes, features are extracted and added to their parent node. The same is done for relational nodes, such as prepositions and conjunctions (case, mark and cc). The feature maps from swe_relations.py are used to add features to the parent nodes. Thereafter, we process determiner nodes, giving features to the parent node based on form and lemmas, and lastly all the remaining content nodes that did not have any children have their features copies from the original feature column, based on their upos.   
+
+
+
+
+
+
+

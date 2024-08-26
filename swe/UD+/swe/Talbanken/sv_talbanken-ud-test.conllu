@@ -198,7 +198,7 @@
 1	Det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	2	expl	2:expl	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
 2	behövs	behöva	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Pass	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Pass|VerbForm=Fin
 3	ingen	ingen	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Neg	4	det	4:det	_	_
-4	anmälan	anmälan	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	nsubj:pass	2:nsubj:pass	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Neg
+4	anmälan	anmälan	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	nsubj:pass	2:nsubj:pass	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 5	för	för	ADP	PP	_	7	mark	7:mark	_	_
 6	att	att	PART	IE	_	7	mark	7:mark	_	_
 7	komma	komma	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	2	advcl	2:advcl:att	_	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act|RelType=Pur
@@ -1049,7 +1049,7 @@
 5	ut	ut	ADV	PL	_	4	compound:prt	4:compound:prt	_	|
 6	ålderspension	ålderspension	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	4	obj	4:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 7	både	både	CCONJ	KN	_	8	cc	8:cc	_	_
-8	före	före	ADP	PP	_	11	case	11:case	_	Case=Tps|ConjType=Conj
+8	före	före	ADP	PP	_	11	case	11:case	_	ConjType=Conj
 9	och	och	CCONJ	KN	_	10	cc	10:cc	_	_
 10	efter	efter	ADP	PP	_	8	conj	8:conj:och|11:case	_	ConjType=Conj
 11	67-årsmånaden	67-årsmånad	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	4	obl	4:obl:efter	SpaceAfter=No	Case=Tan|Definite=Def|Gender=Com|Number=Sing
@@ -2092,30 +2092,6 @@
 27	.	.	PUNCT	MAD	_	2	punct	2:punct	_	_
 
 
-# sent_id = sv-ud-test-114
-# text = Andra egenskaper utmärkande för u-länder är arbetslöshet; analfabetism, d v s brist på läs- och skrivkunnighet; låg medellivslängd.
-1	Andra	annan	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	2	amod	2:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
-2	egenskaper	egenskap	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	7	nsubj	7:nsubj|9:nsubj|19:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur
-3	utmärkande	utmärkande	ADJ	PC|PRS|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part	2	acl	2:acl	_	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part
-4	för	för	ADP	PP	_	5	case	5:case	_	_
-5	u-länder	u-land	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	3	obl	3:obl:för	_	Case=Ben|Definite=Ind|Gender=Neut|Number=Plur
-6	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	7	cop	7:cop	_	_
-7	arbetslöshet	arbetslöshet	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	0	root	0:root	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
-8	;	;	PUNCT	MID	_	9	punct	9:punct	_	_
-9	analfabetism	analfabetism	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	7	conj	7:conj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
-10	,	,	PUNCT	MID	_	9	punct	9:punct	_	_
-11	d v s	det_vill_säga	ADV	AB|AN	Abbr=Yes	12	advmod	12:advmod	_	Abbr=Yes
-12	brist	brist	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	9	appos	9:appos	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
-13	på	på	ADP	PP	_	14	case	14:case	_	_
-14	läs-	läsa	VERB	VB|SMS	VerbForm=Stem	12	nmod	12:nmod:på	_	läsa	VerbForm=Stem
-15	och	och	CCONJ	KN	_	16	cc	16:cc	_	_
-16	skrivkunnighet	skrivkunnighet	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	14	conj	12:nmod:på|14:conj:och	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|ConjType=Conj
-17	;	;	PUNCT	MID	_	19	punct	19:punct	_	_
-18	låg	låg	ADJ	JJ|POS|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	19	amod	19:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing
-19	medellivslängd	medellivslängd	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	7	conj	7:conj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
-20	.	.	PUNCT	MAD	_	7	punct	7:punct	_	_
-
-
 # sent_id = sv-ud-test-115
 # text = Man kan också mäta ett lands standard med sådana mått som antal läkare, lärare, böcker, tidningar, telefoner, radioapparater, bilar o s v per invånare.
 1	Man	man	PRON	PN|UTR|SIN|IND|SUB	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	4	nsubj	4:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
@@ -2602,9 +2578,9 @@
 13	huvudsak	huvudsak	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	12	fixed	12:fixed	_	_
 14	indelade	indelad	ADJ	PC|PRF|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|Tense=Past|VerbForm=Part	0	root	0:root	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|Tense=Past|VerbForm=Fin|Mood=Ind|Polarity=Pos|Voice=Act
 15	i	i	ADP	PP	_	18	case	18:case	_	_
-16	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	18	det	18:det	_	_
+16	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	18	det	18:det	_	Definite=Ind|Number=Plur|PronType=Ind
 17	få	få	ADJ	JJ|POS|UTR/NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Plur	18	amod	18:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Plur
-18	färgfält	färgfält	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	14	obl	14:obl:i	_	Case=Ine|Definite=Ind|Gender=Neut|Number=Plur|PronType=Ind
+18	färgfält	färgfält	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	14	obl	14:obl:i	_	Case=Ine|Definite=Ind|Gender=Neut|Number=Plur
 19	-	-	PUNCT	MID	_	14	punct	14:punct	_	_
 20	för	för	ADP	PP	_	22	mark	22:mark	_	_
 21	att	att	PART	IE	_	22	mark	22:mark	_	_
@@ -3684,8 +3660,8 @@
 4	man	man	PRON	PN|UTR|SIN|IND|SUB	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	5	nsubj	5:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
 5	läsa	läsa	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	0:root	_	VerbForm=Fin|Tense=Pres|Mood=Ind,Pot|Polarity=Pos|Voice=Act
 6	om	om	ADP	PP	_	8	case	8:case	_	_
-7	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	8	det	8:det	_	_
-8	huvuddrag	huvuddrag	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	5	obl	5:obl:om	_	Case=The|Definite=Ind|Gender=Neut|Number=Plur|PronType=Ind
+7	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	8	det	8:det	_	Definite=Ind|Number=Plur|PronType=Ind
+8	huvuddrag	huvuddrag	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	5	obl	5:obl:om	_	Case=The|Definite=Ind|Gender=Neut|Number=Plur
 9	i	i	ADP	PP	_	10	case	10:case	_	_
 10	äktenskapslagstiftningen	äktenskapslagstiftning	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	8	nmod	8:nmod:i	SpaceAfter=No	Case=Ine|Definite=Def|Gender=Com|Number=Sing
 11	.	.	PUNCT	MAD	_	5	punct	5:punct	_	_
@@ -4496,29 +4472,6 @@
 22	.	.	PUNCT	MAD	_	21	punct	21:punct	_	_
 
 
-# newpar id = P122.5
-# sent_id = sv-ud-test-234
-# text = Annars är naturligtvis pappan den som är närmast till hands att dela både bekymmer och glädjeämnen med.
-1	Annars	annars	ADV	AB	_	5	advmod	5:advmod	_	|
-2	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	5	cop	5:cop	_	_
-3	naturligtvis	naturligtvis	ADV	AB	_	5	advmod	5:advmod	_	|
-4	pappan	pappa	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	5	nsubj	5:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing
-5	den	den	PRON	PN|UTR|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Com|Number=Sing|PronType=Prs	0	root	0:root|9:nsubj	_	Definite=Def|Gender=Com|Number=Sing|PronType=Prs|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
-6	som	som	PRON	HP|-|-|-	PronType=Rel	9	nsubj	5:ref	_	PronType=Rel
-7	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	9	cop	9:cop	_	_
-8	närmast	nära	ADV	AB|SUV	Degree=Sup	9	advmod	9:advmod	_	Degree=Sup
-9	till	till	ADP	PP	_	5	acl:relcl	5:acl:relcl	_	VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
-10	hands	hands	NOUN	NN|UTR|SIN|IND|GEN	Case=Gen|Definite=Ind|Gender=Com|Number=Sing	9	fixed	9:fixed	_	_
-11	att	att	PART	IE	_	12	mark	12:mark	_	_
-12	dela	dela	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	9	advcl	9:advcl:att	_	dela	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-13	både	både	CCONJ	KN	_	14	cc	14:cc	_	_
-14	bekymmer	bekymmer	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	12	nsubj	12:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur|ConjType=Conj
-15	och	och	CCONJ	KN	_	16	cc	16:cc	_	_
-16	glädjeämnen	glädjeämne	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	14	conj	12:nsubj|14:conj:och	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur|ConjType=Conj
-17	med	med	ADP	PP	_	12	case	12:case	SpaceAfter=No	_
-18	.	.	PUNCT	MAD	_	5	punct	5:punct	_	_
-
-
 # sent_id = sv-ud-test-235
 # text = Pappan lär bäst känna sitt lilla barn genom att hjälpa till med att sköta det.
 1	Pappan	pappa	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	2	nsubj	2:nsubj|4:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing
@@ -4958,9 +4911,9 @@
 3	spädbarn	spädbarn	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	1	obj	1:obj|4:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur
 4	ensamma	ensam	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	1	xcomp	1:xcomp	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
 5	hemma	hemma	ADV	AB	_	1	advmod	1:advmod	_	|
-6	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	8	det	8:det	_	_
+6	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	8	det	8:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
 7	längre	lång	ADJ	JJ|KOM|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Cmp	8	amod	8:amod	_	Case=Nom|Degree=Cmp
-8	stund	stund	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	1	obl	1:obl	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+8	stund	stund	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	1	obl	1:obl	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 9	!	!	PUNCT	MAD	_	1	punct	1:punct	_	_
 
 
@@ -5074,7 +5027,7 @@
 2	del	del	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	3	nmod	3:nmod	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 3	barn	barn	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	5	nsubj	5:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur
 4	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	5	cop	5:cop	_	_
-5	tidiga	tidig	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	0	root	0:root	_	Case=Teg|Definite=Ind|Degree=Pos|Number=Plur|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
+5	tidiga	tidig	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	0	root	0:root	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
 6	och	och	CCONJ	KN	_	8	cc	8:cc	_	_
 7	andra	annan	PRON	PN|UTR/NEU|PLU|IND|SUB/OBJ	Definite=Ind|Number=Plur|PronType=Ind	8	nsubj	8:nsubj	_	Definite=Ind|Number=Plur|PronType=Ind
 8	sena	sen	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	5	conj	5:conj:och	SpaceAfter=No	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|ConjType=Conj
@@ -5088,38 +5041,6 @@
 16	längre	lång	ADJ	JJ|KOM|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Cmp	17	amod	17:amod	_	Case=Nom|Degree=Cmp
 17	sikt	sikt	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	11	obl	11:obl:på	SpaceAfter=No	Case=Ade|Definite=Ind|Gender=Com|Number=Sing
 18	.	.	PUNCT	MAD	_	5	punct	5:punct	_	_
-
-
-# sent_id = sv-ud-test-259
-# text = Det kan hända, att ett barn är tidigt på ett område, t.ex. när det gäller att gå, men senare med att tala eller tvärtom.
-1	Det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	3	expl	3:expl	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
-2	kan	kunna	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	3	aux	3:aux	_	_
-3	hända	hända	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	0:root	SpaceAfter=No	VerbForm=Fin|Tense=Pres|Mood=Ind,Pot|Polarity=Pos|Voice=Act
-4	,	,	PUNCT	MID	_	3	punct	3:punct	_	_
-5	att	att	SCONJ	SN	_	9	mark	9:mark	_	_
-6	ett	en	DET	DT|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Art	7	det	7:det	_	_
-7	barn	barn	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	9	nsubj	9:nsubj|22:nsubj|27:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
-8	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	9	cop	9:cop	_	_
-9	tidigt	tidig	ADJ	JJ|POS|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	3	csubj	3:csubj	_	Case=Teg|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|RelType=att
-10	på	på	ADP	PP	_	12	case	12:case	_	_
-11	ett	en	DET	DT|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Art	12	det	12:det	_	_
-12	område	område	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	9	obl	9:obl:på	SpaceAfter=No	Case=Ade|Definite=Ind|Gender=Neut|Number=Sing
-13	,	,	PUNCT	MID	_	12	punct	12:punct	_	_
-14	t.ex.	till_exempel	ADV	AB|AN	Abbr=Yes	19	advmod	19:advmod	_	_
-15	när	när	ADV	HA	_	19	case	19:case	_	|
-16	det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	15	fixed	15:fixed	_	_
-17	gäller	gälla	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	15	fixed	15:fixed	_	_
-18	att	att	PART	IE	_	19	mark	19:mark	_	_
-19	gå	gå	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	12	appos	12:appos	SpaceAfter=No	gå	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-20	,	,	PUNCT	MID	_	22	punct	22:punct	_	_
-21	men	men	CCONJ	KN	_	22	cc	22:cc	_	_
-22	senare	sen	ADJ	JJ|KOM|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Cmp	9	conj	3:csubj|9:conj:men	_	Case=Nom|Degree=Cmp|ConjType=Advs
-23	med	med	ADP	PP	_	25	mark	25:mark	_	_
-24	att	att	PART	IE	_	25	mark	25:mark	_	_
-25	tala	tala	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	22	advcl	22:advcl:att	_	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act|RelType=Com
-26	eller	eller	CCONJ	KN	_	27	cc	27:cc	_	_
-27	tvärtom	tvärtom	ADV	AB	_	9	conj	3:csubj|9:conj:eller	SpaceAfter=No	ConjType=Disj
-28	.	.	PUNCT	MAD	_	3	punct	3:punct	_	_
 
 
 # newpar id = P122.15
@@ -5212,29 +5133,6 @@
 21	stora	stor	ADJ	JJ|POS|UTR/NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Degree=Pos	22	amod	22:amod	_	Case=Nom|Definite=Def|Degree=Pos
 22	huvud	huvud	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	18	obj	18:obj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
 23	.	.	PUNCT	MAD	_	5	punct	5:punct	_	_
-
-
-# sent_id = sv-ud-test-265
-# text = Det kan inte fästa blicken och att ögonen tittar i kors ibland är inget att oroa sig för.
-1	Det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	4	nsubj	4:nsubj	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
-2	kan	kunna	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	4	aux	4:aux	_	_
-3	inte	inte	PART	AB	Polarity=Neg	4	advmod	4:advmod	_	_
-4	fästa	fästa	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	0:root	_	VerbForm=Fin|Tense=Pres|Mood=Ind,neg(Pot)|Polarity=Pos|Voice=Act
-5	blicken	blick	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	4	obj	4:obj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing
-6	och	och	CCONJ	KN	_	14	cc	14:cc	_	_
-7	att	att	SCONJ	SN	_	9	mark	9:mark	_	_
-8	ögonen	öga	NOUN	NN|NEU|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Plur	9	nsubj	9:nsubj	_	Case=Nom|Definite=Def|Gender=Neut|Number=Plur
-9	tittar	titta	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	14	csubj	14:csubj	_	RelType=att|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-10	i	i	ADP	PP	_	11	case	11:case	_	_
-11	kors	kors	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	9	obl	9:obl:i	_	Case=Ine|Definite=Ind|Gender=Neut|Number=Sing
-12	ibland	ibland	ADV	AB	_	9	advmod	9:advmod	_	|
-13	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	14	cop	14:cop	_	_
-14	inget	ingen	PRON	PN|NEU|SIN|IND|SUB/OBJ	Definite=Ind|Gender=Neut|Number=Sing|PronType=Neg	4	conj	4:conj:och	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Neg|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|ConjType=Conj
-15	att	att	PART	IE	_	16	mark	16:mark	_	_
-16	oroa	oroa	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	14	acl	14:acl:att	_	oroa	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-17	sig	sig	PRON	PN|UTR/NEU|SIN/PLU|DEF|OBJ	Case=Acc|Definite=Def|PronType=Prs	16	obj	16:obj	_	Case=Acc|Definite=Def|PronType=Prs
-18	för	för	ADP	PP	_	16	case	16:case	SpaceAfter=No	_
-19	.	.	PUNCT	MAD	_	4	punct	4:punct	_	_
 
 
 # sent_id = sv-ud-test-266
@@ -5545,8 +5443,8 @@
 16	inte	inte	PART	AB	Polarity=Neg	15	advmod	15:advmod	_	_
 17	gå	gå	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	15	xcomp	15:xcomp	_	VerbForm=Inf|Voice=Act
 18	förrän	förrän	ADV	AB	_	21	advmod	21:advmod	_	|
-19	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	20	det	20:det	_	_
-20	månader	månad	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	21	obl	21:obl	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur|PronType=Ind
+19	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	20	det	20:det	_	Definite=Ind|Number=Plur|PronType=Ind
+20	månader	månad	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	21	obl	21:obl	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur
 21	senare	sen	ADV	AB|KOM	Degree=Cmp	15	advmod	15:advmod	SpaceAfter=No	Degree=Cmp
 22	.	.	PUNCT	MAD	_	3	punct	3:punct	_	_
 
@@ -5969,9 +5867,9 @@
 12	skrika	skrika	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	10	conj	7:xcomp|10:conj:och	_	ConjType=Conj|Voice=Act|VerbForm=Inf
 13	av	av	ADP	PP	_	14	case	14:case	_	_
 14	hunger	hunger	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	10	obl	10:obl:av	_	Case=Agt|Definite=Ind|Gender=Com|Number=Sing
-15	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	17	det	17:det	_	_
+15	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	17	det	17:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
 16	längre	lång	ADJ	JJ|KOM|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Cmp	17	amod	17:amod	_	Case=Nom|Degree=Cmp
-17	stund	stund	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	10	obl	10:obl	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+17	stund	stund	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	10	obl	10:obl	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 18	.	.	PUNCT	MAD	_	3	punct	3:punct	_	_
 
 
@@ -6011,8 +5909,8 @@
 9	regelbundna	regelbunden	ADJ	PC|PRF|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	10	amod	10:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
 10	mål	mål	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	4	obl	4:obl:på	_	Case=Ade|Definite=Ind|Gender=Neut|Number=Plur
 11	efter	efter	ADP	PP	_	13	case	13:case	_	_
-12	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	13	det	13:det	_	_
-13	tid	tid	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	4	obl	4:obl:efter	SpaceAfter=No	Case=Tps|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+12	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	13	det	13:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+13	tid	tid	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	4	obl	4:obl:efter	SpaceAfter=No	Case=Tps|Definite=Ind|Gender=Com|Number=Sing
 14	.	.	PUNCT	MAD	_	4	punct	4:punct	_	_
 
 
@@ -6182,33 +6080,6 @@
 # sent_id = sv-ud-test-309
 # text = Skriket
 1	Skriket	skrik	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	0	root	0:root	_	Case=Nom|Definite=Def|Gender=Neut|Number=Sing
-
-
-# sent_id = sv-ud-test-310
-# text = Det är oundvikligt att spädbarn skriker ibland, och om det inte beror på sjukdom är det inget att oroa sig för.
-1	Det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	3	expl	3:expl	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
-2	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	3	cop	3:cop	_	_
-3	oundvikligt	oundviklig	ADJ	JJ|POS|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	0	root	0:root	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
-4	att	att	SCONJ	SN	_	6	mark	6:mark	_	_
-5	spädbarn	spädbarn	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	6	nsubj	6:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur
-6	skriker	skrika	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	3	csubj	3:csubj	_	RelType=att|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-7	ibland	ibland	ADV	AB	_	6	advmod	6:advmod	SpaceAfter=No	|
-8	,	,	PUNCT	MID	_	18	punct	18:punct	_	_
-9	och	och	CCONJ	KN	_	18	cc	18:cc	_	_
-10	om	om	SCONJ	SN	_	13	mark	13:mark	_	_
-11	det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	13	nsubj	13:nsubj	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
-12	inte	inte	PART	AB	Polarity=Neg	13	advmod	13:advmod	_	_
-13	beror	bero	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	18	advcl	18:advcl:om	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|RelType=The|Tense=Pres
-14	på	på	ADP	PP	_	15	case	15:case	_	_
-15	sjukdom	sjukdom	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	13	obl	13:obl:på	_	Case=Ade|Definite=Ind|Gender=Com|Number=Sing
-16	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	18	cop	18:cop	_	_
-17	det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	18	nsubj	18:nsubj	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
-18	inget	ingen	PRON	PN|NEU|SIN|IND|SUB/OBJ	Definite=Ind|Gender=Neut|Number=Sing|PronType=Neg	3	conj	3:conj:och	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Neg|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|ConjType=Conj
-19	att	att	PART	IE	_	20	mark	20:mark	_	_
-20	oroa	oroa	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	18	acl	18:acl:för	_	oroa	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-21	sig	sig	PRON	PN|UTR/NEU|SIN/PLU|DEF|OBJ	Case=Acc|Definite=Def|PronType=Prs	20	obj	20:obj	_	Case=Acc|Definite=Def|PronType=Prs
-22	för	för	ADP	PP	_	20	case	20:case	SpaceAfter=No	_
-23	.	.	PUNCT	MAD	_	3	punct	3:punct	_	_
 
 
 # sent_id = sv-ud-test-311
@@ -6945,8 +6816,8 @@
 22	och	och	CCONJ	KN	_	23	cc	23:cc	_	_
 23	rena	rena	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	14	conj	10:advcl|14:conj:och	_	ConjType=Conj|Voice=Act|VerbForm=Inf
 24	åtminstone	åtminstone	ADV	AB	_	23	advmod	23:advmod	_	|
-25	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	26	det	26:det	_	_
-26	vattendrag	vattendrag	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	23	obj	23:obj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur|PronType=Ind
+25	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	26	det	26:det	_	Definite=Ind|Number=Plur|PronType=Ind
+26	vattendrag	vattendrag	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	23	obj	23:obj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur
 27	,	,	PUNCT	MID	_	10	punct	10:punct	_	_
 28	så	så	ADV	AB	_	29	advcl	29:advcl	_	|
 29	skapas	skapa	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Pass	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Pass|VerbForm=Fin
@@ -8463,8 +8334,8 @@
 10	de	de	PRON	PN|UTR/NEU|PLU|DEF|SUB	Case=Nom|Definite=Def|Number=Plur|PronType=Prs	12	nsubj	12:nsubj	_	Case=Nom|Definite=Def|Number=Plur|PronType=Prs
 11	skall	skola	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	12	aux	12:aux	_	_
 12	ha	ha	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	8	advcl	8:advcl:om	_	VerbForm=Fin|Tense=Fut|Mood=Ind|Polarity=Pos|Voice=Act|RelType=The
-13	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	14	det	14:det	_	_
-14	chans	chans	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	12	obj	12:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+13	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	14	det	14:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+14	chans	chans	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	12	obj	12:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 15	i	i	ADP	PP	_	16	case	16:case	_	_
 16	livet	liv	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	12	obl	12:obl:i	SpaceAfter=No	Case=Ine|Definite=Def|Gender=Neut|Number=Sing
 17	,	,	PUNCT	MID	_	27	punct	27:punct	_	_
@@ -8558,7 +8429,7 @@
 1	Utan	utan	ADP	PP	_	2	case	2:case	_	_
 2	utbildning	utbildning	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	0	root	0:root	_	Case=Abe|Definite=Ind|Gender=Com|Number=Sing
 3	ingen	ingen	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Neg	4	det	4:det	_	_
-4	genväg	genväg	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	nsubj	2:nsubj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Neg
+4	genväg	genväg	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	nsubj	2:nsubj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 5	.	.	PUNCT	MAD	_	2	punct	2:punct	_	_
 
 
@@ -9009,24 +8880,6 @@
 13	mer	mycket	ADV	AB|KOM	Degree=Cmp	14	advmod	14:advmod	_	_
 14	svårlöst	svårlöst	ADJ	JJ|POS|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Sing	0	root	0:root	SpaceAfter=No	Case=Nom|Definite=Ind|Degree=Cmp|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|ConjType=Advs
 15	.	.	PUNCT	MAD	_	14	punct	14:punct	_	_
-
-
-# sent_id = sv-ud-test-458
-# text = Ökad u-hjälp, ja, men det är inte mycket att hoppas på.
-1	Ökad	ökad	ADJ	PC|PRF|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part	2	amod	2:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part
-2	u-hjälp	u-hjälp	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	0	root	0:root	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
-3	,	,	PUNCT	MID	_	2	punct	2:punct	_	_
-4	ja	ja	INTJ	IN	_	2	parataxis	2:parataxis	SpaceAfter=No	|
-5	,	,	PUNCT	MID	_	10	punct	10:punct	_	_
-6	men	men	CCONJ	KN	_	10	cc	10:cc	_	_
-7	det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	10	nsubj	10:nsubj	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
-8	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	10	cop	10:cop	_	_
-9	inte	inte	PART	AB	Polarity=Neg	10	advmod	10:advmod	_	_
-10	mycket	mycken	PRON	PN|NEU|SIN|IND|SUB/OBJ	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind	2	conj	2:conj:men	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Neg|Voice=Act|ConjType=Advs
-11	att	att	PART	IE	_	12	mark	12:mark	_	_
-12	hoppas	hoppas	VERB	VB|INF|SFO	VerbForm=Inf	10	acl	10:acl:på	_	hoppas	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-13	på	på	ADP	PP	_	12	case	12:case	SpaceAfter=No	_
-14	.	.	PUNCT	MAD	_	2	punct	2:punct	_	_
 
 
 # newpar id = P210.19
@@ -9772,7 +9625,7 @@
 1	Det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	4	nsubj	4:nsubj	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
 2	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	4	cop	4:cop	_	_
 3	ingen	ingen	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Neg	4	det	4:det	_	_
-4	fara	fara	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	0	root	0:root	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|PronType=Neg
+4	fara	fara	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	0	root	0:root	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
 5	med	med	ADP	PP	_	6	case	6:case	_	_
 6	strömmingen	strömming	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	4	obl	4:obl:med	SpaceAfter=No	Case=Com|Definite=Def|Gender=Com|Number=Sing
 7	!	!	PUNCT	MAD	_	4	punct	4:punct	_	_
@@ -9823,7 +9676,7 @@
 2	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	5	cop	5:cop	_	_
 3	halterna	halt	NOUN	NN|UTR|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Plur	5	nsubj	5:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Plur
 4	oroande	oroande	ADJ	PC|PRS|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part	5	advmod	5:advmod	_	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part
-5	höga	hög	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	0	root	0:root	SpaceAfter=No	Case=fara|Definite=Ind|Degree=Pos|Number=Plur|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
+5	höga	hög	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	0	root	0:root	SpaceAfter=No	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
 6	,	,	PUNCT	MID	_	9	punct	9:punct	_	_
 7	men	men	CCONJ	KN	_	9	cc	9:cc	_	_
 8	nån	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	9	det	9:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
@@ -9999,7 +9852,7 @@
 10	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	13	cop	13:cop	_	_
 11	det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	13	nsubj	13:nsubj	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
 12	ingen	ingen	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Neg	13	det	13:det	_	_
-13	fara	fara	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	15	xcomp	15:xcomp	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|ConjType=Advs|PronType=Neg
+13	fara	fara	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	15	xcomp	15:xcomp	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|ConjType=Advs
 14	,	,	PUNCT	MID	_	15	punct	15:punct	_	_
 15	påpekar	påpeka	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	4	parataxis	4:parataxis	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
 16	både	både	CCONJ	KN	_	18	cc	18:cc	_	_
@@ -10520,33 +10373,6 @@
 15	.	.	PUNCT	MAD	_	9	punct	9:punct	_	_
 
 
-# newpar id = P214.6
-# sent_id = sv-ud-test-535
-# text = Psykiska problem under uppväxttiden eller i vuxen ålder före graviditeten kan ge svårigheter under och efter en graviditet, visar undersökningen.
-1	Psykiska	psykisk	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	2	amod	2:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
-2	problem	problem	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	12	nsubj	12:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur
-3	under	under	ADP	PP	_	4	case	4:case	_	_
-4	uppväxttiden	uppväxttid	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	2	nmod	2:nmod:under	_	Case=Sub|Definite=Def|Gender=Com|Number=Sing
-5	eller	eller	CCONJ	KN	_	8	cc	8:cc	_	_
-6	i	i	ADP	PP	_	8	case	8:case	_	_
-7	vuxen	vuxen	ADJ	JJ|POS|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	8	amod	8:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing
-8	ålder	ålder	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	4	conj	2:nmod:i|4:conj:eller	_	Case=Ine|Definite=Ind|Gender=Com|Number=Sing|ConjType=Disj
-9	före	före	ADP	PP	_	10	case	10:case	_	_
-10	graviditeten	graviditet	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	2	nmod	2:nmod:före	_	Case=Tan|Definite=Def|Gender=Com|Number=Sing
-11	kan	kunna	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	12	aux	12:aux	_	_
-12	ge	ge	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	0:root	_	VerbForm=Fin|Tense=Pres|Mood=Ind,Pot|Polarity=Pos|Voice=Act
-13	svårigheter	svårighet	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	12	obj	12:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur
-14	under	under	ADP	PP	_	18	case	18:case	_	Case=Tps
-15	och	och	CCONJ	KN	_	16	cc	16:cc	_	_
-16	efter	efter	ADP	PP	_	14	conj	14:conj:och|18:case	_	ConjType=Conj
-17	en	en	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Art	18	det	18:det	_	_
-18	graviditet	graviditet	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	12	obl	12:obl:under	SpaceAfter=No	Case=Sub|Definite=Ind|Gender=Com|Number=Sing
-19	,	,	PUNCT	MID	_	12	punct	12:punct	_	_
-20	visar	visa	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	12	advcl	12:advcl	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-21	undersökningen	undersökning	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	20	nsubj	20:nsubj	SpaceAfter=No	Case=Nom|Definite=Def|Gender=Com|Number=Sing
-22	.	.	PUNCT	MAD	_	12	punct	12:punct	_	_
-
-
 # sent_id = sv-ud-test-536
 # text = En tidig sexualdebatt och många sexualpartners kan i en del fall tyda på neurotiska störningar.
 1	En	en	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Art	3	det	3:det	_	_
@@ -10619,7 +10445,7 @@
 13	om	om	SCONJ	SN	_	16	mark	16:mark	_	_
 14	graviditeten	graviditet	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	16	nsubj	16:nsubj|17:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing
 15	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	16	cop	16:cop	_	_
-16	planerad	planerad	ADJ	PC|PRF|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part	7	advcl	7:advcl:om	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Pres|VerbForm=Fin|Mood=Ind|Polarity=Pos|Voice=Act|RelType=Ade,The|ConjType=Disj
+16	planerad	planerad	ADJ	PC|PRF|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part	7	advcl	7:advcl:om	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Pres|VerbForm=Fin|Mood=Ind|Polarity=Pos|Voice=Act|RelType=Ade,The
 17	eller	eller	CCONJ	KN	_	16	conj	7:advcl:om|16:conj	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act
 18	inte	inte	PART	AB	Polarity=Neg	17	advmod	17:advmod	SpaceAfter=No	_
 19	.	.	PUNCT	MAD	_	7	punct	7:punct	_	_
@@ -10630,7 +10456,7 @@
 1	Dålig	dålig	ADJ	JJ|POS|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	4	amod	4:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing
 2	eller	eller	CCONJ	KN	_	4	cc	4:cc	_	_
 3	ingen	ingen	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Neg	4	det	4:det	_	_
-4	preventivteknik	preventivteknik	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	5	nsubj	5:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|ConjType=Disj|PronType=Neg
+4	preventivteknik	preventivteknik	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	5	nsubj	5:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|ConjType=Disj
 5	finns	finnas	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
 6	med	med	ADP	PL	_	5	compound:prt	5:compound:prt	_	_
 7	i	i	ADP	PP	_	8	case	8:case	_	_
@@ -10905,7 +10731,7 @@
 5	om	om	SCONJ	SN	_	8	mark	8:mark	_	_
 6	barnet	barn	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	8	nsubj	8:nsubj|9:nsubj	_	Case=Nom|Definite=Def|Gender=Neut|Number=Sing
 7	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	8	cop	8:cop	_	_
-8	önskat	önskad	ADJ	PC|PRF|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part	3	acl	3:acl:om	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|Tense=Pres|VerbForm=Fin|Mood=Ind|Polarity=Pos|Voice=Act|RelType=Rpl,The|ConjType=Disj
+8	önskat	önskad	ADJ	PC|PRF|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part	3	acl	3:acl:om	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|Tense=Pres|VerbForm=Fin|Mood=Ind|Polarity=Pos|Voice=Act|RelType=Rpl,The
 9	eller	eller	CCONJ	KN	_	8	conj	3:acl:om|8:conj	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act
 10	inte	inte	PART	AB	Polarity=Neg	9	advmod	9:advmod	_	_
 11	en	en	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Art	13	det	13:det	_	_
@@ -10945,16 +10771,16 @@
 # text = Om mannen är med eller ej tycks inte spela någon större roll för smärtupplevelsen.
 1	Om	om	SCONJ	SN	_	3	mark	3:mark	_	_
 2	mannen	man	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	3	nsubj	3:nsubj|5:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing
-3	är	vara	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	7	csubj	7:csubj	_	RelType=The,eller|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
+3	är	vara	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	7	csubj	7:csubj	_	RelType=The|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
 4	med	med	ADP	PL	_	3	compound:prt	3:compound:prt	_	_
 5	eller	eller	CCONJ	KN	_	3	conj	3:conj|7:csubj	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act
 6	ej	ej	PART	AB	Polarity=Neg	5	advmod	5:advmod	_	_
 7	tycks	tyckas	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|Tense=Pres
 8	inte	inte	PART	AB	Polarity=Neg	7	advmod	7:advmod	_	_
 9	spela	spela	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	7	xcomp	7:xcomp	_	Voice=Act|VerbForm=Inf
-10	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	12	det	12:det	_	_
+10	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	12	det	12:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
 11	större	stor	ADJ	JJ|KOM|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Cmp	12	amod	12:amod	_	Case=Nom|Degree=Cmp
-12	roll	roll	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	9	obj	9:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+12	roll	roll	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	9	obj	9:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 13	för	för	ADP	PP	_	14	case	14:case	_	_
 14	smärtupplevelsen	smärtupplevelse	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	9	obl	9:obl:för	SpaceAfter=No	Case=Ben|Definite=Def|Gender=Com|Number=Sing
 15	.	.	PUNCT	MAD	_	7	punct	7:punct	_	_
@@ -11196,7 +11022,7 @@
 1	Det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	2	expl	2:expl	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
 2	råder	råda	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
 3	inget	ingen	DET	DT|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Neg	4	det	4:det	_	_
-4	tvivel	tvivel	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	2	nsubj	2:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing|PronType=Neg
+4	tvivel	tvivel	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	2	nsubj	2:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
 5	om	om	ADP	PP	_	16	mark	16:mark	_	_
 6	att	att	SCONJ	SN	_	16	mark	16:mark	_	_
 7	förändringar	förändring	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	16	nsubj	16:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur
@@ -11225,8 +11051,8 @@
 30	denna	denna	DET	DT|UTR|SIN|DEF	Definite=Def|Gender=Com|Number=Sing|PronType=Dem	31	det	31:det	_	_
 31	grupp	grupp	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	36	obl	36:obl:i	_	Case=Ine|Definite=Def|Gender=Com|Number=Sing|Dem=Prox
 32	kan	kunna	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	36	aux	36:aux	_	_
-33	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	34	det	34:det	_	_
-34	behandling	behandling	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	36	nsubj:pass	36:nsubj:pass	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+33	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	34	det	34:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+34	behandling	behandling	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	36	nsubj:pass	36:nsubj:pass	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 35	inte	inte	PART	AB	Polarity=Neg	36	advmod	36:advmod	_	_
 36	erbjudas	erbjuda	VERB	VB|INF|SFO	VerbForm=Inf|Voice=Pass	24	ccomp	24:ccomp	SpaceAfter=No	VerbForm=Fin|Tense=Pres|Mood=Ind,neg(Pot)|Polarity=Pos|Voice=Act|RelType=att
 37	.	.	PUNCT	MAD	_	2	punct	2:punct	_	_
@@ -11270,8 +11096,8 @@
 12	nå	nå	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	11	xcomp	11:xcomp	_	Voice=Act|VerbForm=Inf
 13	fram	fram	ADV	AB	_	12	advmod	12:advmod	_	|
 14	till	till	ADP	PP	_	16	case	16:case	_	_
-15	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	16	det	16:det	_	_
-16	form	form	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	13	obl	13:obl:till	_	Case=Lat|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+15	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	16	det	16:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+16	form	form	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	13	obl	13:obl:till	_	Case=Lat|Definite=Ind|Gender=Com|Number=Sing
 17	av	av	ADP	PP	_	18	case	18:case	_	_
 18	åtgärd	åtgärd	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	16	nmod	16:nmod:av|21:nsubj	_	Case=Agt|Definite=Ind|Gender=Com|Number=Sing
 19	som	som	PRON	HP|-|-|-	PronType=Rel	21	nsubj	18:ref	_	PronType=Rel
@@ -11519,7 +11345,7 @@
 1	'	'	PUNCT	PAD	_	2	punct	2:punct	SpaceAfter=No	_
 2	Väck	väcka	VERB	VB|IMP|AKT	Mood=Imp|VerbForm=Fin|Voice=Act	0	root	0:root	_	Mood=Imp|Voice=Act|VerbForm=Fin
 3	inget	ingen	DET	DT|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Neg	4	det	4:det	_	_
-4	hopp	hopp	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	2	obj	2:obj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing|PronType=Neg
+4	hopp	hopp	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	2	obj	2:obj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
 5	om	om	ADP	PP	_	6	case	6:case	_	_
 6	det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	2	obl	2:obl:om	SpaceAfter=No	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs|Case=The
 7	.	.	PUNCT	MAD	_	2	punct	2:punct	SpaceAfter=No	_
@@ -11611,7 +11437,7 @@
 15	tillstånd	tillstånd	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	13	obl	13:obl:till	_	Case=Lat|Definite=Ind|Gender=Neut|Number=Sing
 16	där	där	ADV	HA	_	19	advmod	19:advmod	_	|
 17	ingen	ingen	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Neg	18	det	18:det	_	_
-18	terapi	terapi	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	19	nsubj	19:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Neg
+18	terapi	terapi	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	19	nsubj	19:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 19	finns	finnas	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin	15	acl:relcl	15:acl:relcl	SpaceAfter=No	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
 20	.	.	PUNCT	MAD	_	3	punct	3:punct	_	_
 
@@ -11811,8 +11637,8 @@
 4	inte	inte	PART	AB	Polarity=Neg	5	advmod	5:advmod	_	_
 5	fråga	fråga	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	0	root	0:root	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Neg|Voice=Act
 6	om	om	ADP	PP	_	8	case	8:case	_	_
-7	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	8	det	8:det	_	_
-8	form	form	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	5	obl	5:obl:om	_	Case=The|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+7	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	8	det	8:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+8	form	form	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	5	obl	5:obl:om	_	Case=The|Definite=Ind|Gender=Com|Number=Sing
 9	av	av	ADP	PP	_	10	case	10:case	_	_
 10	röntgenapparatur	röntgenapparatur	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	8	nmod	8:nmod:av	SpaceAfter=No	Case=Agt|Definite=Ind|Gender=Com|Number=Sing
 11	.	.	PUNCT	MAD	_	5	punct	5:punct	_	_
@@ -12182,9 +12008,9 @@
 13	sin	sig	PRON	PS|UTR|SIN|DEF	Definite=Def|Gender=Com|Number=Sing|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	_	Definite=Def|Gender=Com|Number=Sing|Poss=Yes|PronType=Prs
 14	brits	brits	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	10	obl	10:obl:från	_	Case=Abl|Definite=Ind|Gender=Com|Number=Sing
 15	utan	utan	ADP	PP	_	18	case	18:case	_	_
-16	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	18	det	18:det	_	_
+16	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	18	det	18:det	_	Definite=Ind|Number=Plur|PronType=Ind
 17	kvarstående	kvarstående	ADJ	PC|PRS|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part	18	amod	18:amod	_	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part
-18	besvär	besvär	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	10	obl	10:obl:utan	SpaceAfter=No	Case=Abe|Definite=Ind|Gender=Neut|Number=Plur|PronType=Ind
+18	besvär	besvär	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	10	obl	10:obl:utan	SpaceAfter=No	Case=Abe|Definite=Ind|Gender=Neut|Number=Plur
 19	.	.	PUNCT	MAD	_	10	punct	10:punct	_	_
 
 
@@ -12554,6 +12380,28 @@
 16	.	.	PUNCT	MAD	_	2	punct	2:punct	_	_
 
 
+# sent_id = sv-ud-test-616
+# text = Den leds vidare under huden bakom örat, in i en av halsvenerna och utmynnar i hjärtat.
+1	Den	den	PRON	PN|UTR|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Com|Number=Sing|PronType=Prs	2	nsubj:pass	2:nsubj:pass|15:nsubj:pass	_	Definite=Def|Gender=Com|Number=Sing|PronType=Prs
+2	leds	leda	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Pass	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Pass|VerbForm=Fin
+3	vidare	vidare	ADV	AB|KOM	Degree=Cmp	2	advmod	2:advmod	_	Degree=Cmp
+4	under	under	ADP	PP	_	5	case	5:case	_	_
+5	huden	hud	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	3	obl	3:obl:under	_	Case=Sub|Definite=Def|Gender=Com|Number=Sing
+6	bakom	bakom	ADP	PP	_	7	case	7:case	_	_
+7	örat	öra	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	5	nmod	5:nmod:bakom	SpaceAfter=No	Case=Pst|Definite=Def|Gender=Neut|Number=Sing
+8	,	,	PUNCT	MID	_	9	punct	9:punct	_	_
+9	in	in	ADV	AB	_	3	conj	2:advmod|3:conj	_	|
+10	i	i	ADP	PP	_	11	case	11:case	_	_
+11	en	en	PRON	PN|UTR|SIN|IND|SUB/OBJ	Definite=Ind|Gender=Com|Number=Sing|PronType=Prs	9	obl	9:obl:i	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Prs|Case=Ine
+12	av	av	ADP	PP	_	13	case	13:case	_	_
+13	halsvenerna	halsven	NOUN	NN|NEU|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Plur	11	nmod	11:nmod:av	_	Case=Agt|Definite=Def|Gender=Neut|Number=Plur
+14	och	och	CCONJ	KN	_	15	cc	15:cc	_	_
+15	utmynnar	utmynna	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	2	conj	2:conj:och	_	ConjType=Conj|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
+16	i	i	ADP	PP	_	17	case	17:case	_	_
+17	hjärtat	hjärta	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	15	obl	15:obl:i	SpaceAfter=No	Case=Ine|Definite=Def|Gender=Neut|Number=Sing
+18	.	.	PUNCT	MAD	_	2	punct	2:punct	_	_
+
+
 # sent_id = sv-ud-test-617
 # text = På detta sätt fungerar hjärtat som en pump som håller hjärnhålorna fria från överflödig vätska
 1	På	på	ADP	PP	_	3	case	3:case	_	_
@@ -12847,8 +12695,8 @@
 1	Alla	all	DET	DT|UTR/NEU|PLU|IND/DEF	Number=Plur|PronType=Tot	2	det	2:det	_	Number=Plur|PronType=Tot
 2	människor	människa	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	3	nsubj	3:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur
 3	råkar	råka	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-4	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	5	det	5:det	_	_
-5	gång	gång	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	3	obl	3:obl	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+4	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	5	det	5:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+5	gång	gång	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	3	obl	3:obl	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 6	ut	ut	ADV	PL	_	3	compound:prt	3:compound:prt	_	|
 7	för	för	ADP	PP	_	10	case	10:case	_	_
 8	vissa	viss	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	10	amod	10:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
@@ -12879,9 +12727,9 @@
 3	oftast	ofta	ADV	AB|SUV	Degree=Sup	2	advmod	2:advmod	_	Degree=Sup
 4	inte	inte	PART	AB	Polarity=Neg	2	advmod	2:advmod	_	_
 5	att	att	SCONJ	SN	_	9	mark	9:mark	_	_
-6	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	8	det	8:det	_	_
+6	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	8	det	8:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
 7	verklig	verklig	ADJ	JJ|POS|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	8	amod	8:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing
-8	sjukdom	sjukdom	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	9	nsubj	9:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+8	sjukdom	sjukdom	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	9	nsubj	9:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 9	drabbat	drabba	VERB	VB|SUP|AKT	VerbForm=Sup|Voice=Act	2	ccomp	2:ccomp	_	RelType=att|Voice=Act|VerbForm=Sup
 10	nervsystemet	nervsystem	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	9	obj	9:obj	_	Case=Nom|Definite=Def|Gender=Neut|Number=Sing
 11	utan	utan	CCONJ	KN	_	15	cc	15:cc	_	_
@@ -13265,9 +13113,9 @@
 10	man	man	PRON	PN|UTR|SIN|IND|SUB	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	12	nsubj	12:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
 11	kan	kunna	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	12	aux	12:aux	_	_
 12	finna	finna	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	7	advcl	7:advcl:att	_	VerbForm=Fin|Tense=Pres|Mood=Ind,Pot|Polarity=Pos|Voice=Act|RelType=Abe,att
-13	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	15	det	15:det	_	_
+13	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	15	det	15:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
 14	yttre	yttre	ADJ	JJ|KOM|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Pos	15	amod	15:amod	_	Case=Nom|Degree=Pos
-15	anledning	anledning	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	12	obj	12:obj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+15	anledning	anledning	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	12	obj	12:obj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 16	.	.	PUNCT	MAD	_	7	punct	7:punct	_	_
 
 
@@ -13420,8 +13268,8 @@
 2	kan	kunna	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	3	aux	3:aux	_	_
 3	försvinna	försvinna	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	0:root	_	VerbForm=Fin|Tense=Pres|Mood=Ind,Pot|Polarity=Pos|Voice=Act
 4	efter	efter	ADP	PP	_	6	case	6:case	_	_
-5	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	6	det	6:det	_	_
-6	sjukdomsperioder	sjukdomsperiod	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	3	obl	3:obl:efter	_	Case=Tps|Definite=Ind|Gender=Com|Number=Plur|PronType=Ind
+5	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	6	det	6:det	_	Definite=Ind|Number=Plur|PronType=Ind
+6	sjukdomsperioder	sjukdomsperiod	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	3	obl	3:obl:efter	_	Case=Tps|Definite=Ind|Gender=Com|Number=Plur
 7	eller	eller	CCONJ	KN	_	8	cc	8:cc	_	_
 8	bli	bli	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	3	conj	3:conj:eller	_	ConjType=Disj|Voice=Act|VerbForm=Inf
 9	långvarig	långvarig	ADJ	JJ|POS|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	8	xcomp	8:xcomp	SpaceAfter=No	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing
@@ -13769,32 +13617,6 @@
 3	med	med	ADP	PP	_	5	case	5:case	_	_
 4	psykiska	psykisk	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	5	amod	5:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
 5	verkningar	verkning	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	2	nmod	2:nmod:med	_	Case=Com|Definite=Ind|Gender=Com|Number=Plur
-
-
-# sent_id = sv-ud-test-683
-# text = Att vissa i naturen förekommande ämnen verkar stimulerande eller bedövande har människan vetat sedan urminnes tider och också begagnat sig av.
-1	Att	att	SCONJ	SN	_	7	mark	7:mark	_	_
-2	vissa	viss	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	6	amod	6:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
-3	i	i	ADP	PP	_	4	case	4:case	_	_
-4	naturen	natur	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	5	obl	5:obl:i	_	Case=Ine|Definite=Def|Gender=Com|Number=Sing
-5	förekommande	förekommande	ADJ	PC|PRS|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part	6	amod	6:amod	_	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part
-6	ämnen	ämne	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	7	nsubj	7:nsubj|8:nsubj|10:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur
-7	verkar	verka	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	13	ccomp	13:ccomp	_	RelType=att|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-8	stimulerande	stimulerande	ADJ	PC|PRS|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part	7	xcomp	7:xcomp	_	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part
-9	eller	eller	CCONJ	KN	_	10	cc	10:cc	_	_
-10	bedövande	bedövande	ADJ	PC|PRS|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part	8	conj	7:xcomp|8:conj:eller	_	Case=Nom|Degree=Pos|Tense=Pres|VerbForm=Part|ConjType=Disj
-11	har	ha	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	13	aux	13:aux	_	_
-12	människan	människa	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	13	nsubj	13:nsubj|19:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing
-13	vetat	veta	VERB	VB|SUP|AKT	VerbForm=Sup|Voice=Act	0	root	0:root	_	VerbForm=Fin|Aspect=Perf|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act
-14	sedan	sedan	ADP	PP	_	16	case	16:case	_	_
-15	urminnes	urminnes	ADJ	JJ|POS|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Pos	16	amod	16:amod	_	Case=Nom|Degree=Pos
-16	tider	tid	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	13	obl	13:obl:sedan	_	Case=Teg|Definite=Ind|Gender=Com|Number=Plur
-17	och	och	CCONJ	KN	_	19	cc	19:cc	_	_
-18	också	också	ADV	AB	_	19	advmod	19:advmod	_	_
-19	begagnat	begagnad	VERB	VB|SUP|AKT	VerbForm=Sup|Voice=Act	13	conj	13:conj:och	_	begagnad	VerbForm=Sup|Voice=Act
-20	sig	sig	PRON	PN|UTR/NEU|SIN/PLU|DEF|OBJ	Case=Acc|Definite=Def|PronType=Prs	19	obj	19:obj	_	Case=Acc|Definite=Def|PronType=Prs
-21	av	av	ADP	PP	_	19	case	19:case	SpaceAfter=No	_
-22	.	.	PUNCT	MAD	_	13	punct	13:punct	_	_
 
 
 # sent_id = sv-ud-test-684
@@ -15270,14 +15092,14 @@
 # text = Redan efter några dagars behandling t ex på sjukhus kan tillvänjning och beroende uppstå.
 1	Redan	redan	ADV	AB	_	5	advmod	5:advmod	_	|
 2	efter	efter	ADP	PP	_	5	case	5:case	_	_
-3	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	4	det	4:det	_	_
-4	dagars	dag	NOUN	NN|UTR|PLU|IND|GEN	Case=Gen|Definite=Ind|Gender=Com|Number=Plur	5	nmod:poss	5:nmod:poss	_	Case=Gen|Definite=Ind|Gender=Com|Number=Plur|PronType=Ind
+3	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	4	det	4:det	_	Definite=Ind|Number=Plur|PronType=Ind
+4	dagars	dag	NOUN	NN|UTR|PLU|IND|GEN	Case=Gen|Definite=Ind|Gender=Com|Number=Plur	5	nmod:poss	5:nmod:poss	_	Case=Gen|Definite=Ind|Gender=Com|Number=Plur
 5	behandling	behandling	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	13	obl	13:obl:efter	_	Case=Tps|Definite=Ind|Gender=Com|Number=Sing
 6	t ex	till_exempel	ADV	AB|AN	Abbr=Yes	8	advmod	8:advmod	_	Abbr=Yes
 7	på	på	ADP	PP	_	8	case	8:case	_	_
 8	sjukhus	sjukhus	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	5	nmod	5:nmod:på	_	Case=Ade|Definite=Ind|Gender=Neut|Number=Sing
 9	kan	kunna	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	13	aux	13:aux	_	_
-10	tillvänjning	tillvänjning	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	13	nsubj	13:nsubj	_	Case=Cnd|Definite=Ind|Gender=Com|Number=Sing
+10	tillvänjning	tillvänjning	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	13	nsubj	13:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 11	och	och	CCONJ	KN	_	12	cc	12:cc	_	_
 12	beroende	beroende	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	10	conj	10:conj:och|13:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing|ConjType=Conj
 13	uppstå	uppstå	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	0:root	SpaceAfter=No	VerbForm=Fin|Tense=Pres|Mood=Ind,Pot|Polarity=Pos|Voice=Act
@@ -15658,8 +15480,8 @@
 # sent_id = sv-ud-test-772
 # text = Sedan några årtionden tillbaka har bostadsfrågorna ansetts så viktiga att de blivit en hela samhällets angelägenhet.
 1	Sedan	sedan	ADP	PP	_	3	case	3:case	_	_
-2	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	3	det	3:det	_	_
-3	årtionden	årtionde	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	7	obl	7:obl:sedan	_	Case=Teg|Definite=Ind|Gender=Neut|Number=Plur|PronType=Ind
+2	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	3	det	3:det	_	Definite=Ind|Number=Plur|PronType=Ind
+3	årtionden	årtionde	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	7	obl	7:obl:sedan	_	Case=Teg|Definite=Ind|Gender=Neut|Number=Plur
 4	tillbaka	tillbaka	ADV	AB	_	3	nmod	3:nmod	_	|
 5	har	ha	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	7	aux	7:aux	_	_
 6	bostadsfrågorna	bostadsfråga	NOUN	NN|UTR|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Plur	7	nsubj:pass	7:nsubj:pass|9:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Plur
@@ -17686,8 +17508,8 @@
 9	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	10	cop	10:cop	_	_
 10	förbundna	förbunden	ADJ	PC|PRF|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|Tense=Past|VerbForm=Part	5	conj	2:acl:relcl|5:conj:och	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|Tense=Pres|VerbForm=Fin|Mood=Ind|Polarity=Neg|Voice=Act|ConjType=Conj
 11	med	med	ADP	PP	_	13	case	13:case	_	_
-12	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	13	det	13:det	_	_
-13	krav	krav	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	10	obl	10:obl:med	_	Case=Com|Definite=Ind|Gender=Neut|Number=Plur|PronType=Ind
+12	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	13	det	13:det	_	Definite=Ind|Number=Plur|PronType=Ind
+13	krav	krav	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	10	obl	10:obl:med	_	Case=Com|Definite=Ind|Gender=Neut|Number=Plur
 14	på	på	ADP	PP	_	18	mark	18:mark	_	_
 15	att	att	SCONJ	SN	_	18	mark	18:mark	_	_
 16	pengarna	pengar	NOUN	NN|UTR|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Plur	18	nsubj:pass	18:nsubj:pass	_	Case=Nom|Definite=Def|Gender=Com|Number=Plur
@@ -18526,9 +18348,9 @@
 4	inte	inte	PART	AB	Polarity=Neg	2	advmod	2:advmod	_	_
 5	att	att	PART	IE	_	6	mark	6:mark	_	_
 6	dra	dra	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	2	csubj	2:csubj	_	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-7	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	9	det	9:det	_	_
+7	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	9	det	9:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
 8	skarp	skarp	ADJ	JJ|POS|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	9	amod	9:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing
-9	gräns	gräns	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	6	obj	6:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+9	gräns	gräns	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	6	obj	6:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 10	mellan	mellan	ADP	PP	_	11	case	11:case	_	_
 11	i-länder	i-land	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	6	obl	6:obl:mellan	_	Case=Int|Definite=Ind|Gender=Neut|Number=Plur
 12	och	och	CCONJ	KN	_	13	cc	13:cc	_	_
@@ -18735,7 +18557,7 @@
 15	och	och	CCONJ	KN	_	16	cc	16:cc	_	_
 16	europeiska	europeisk	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	12	conj	12:conj:och|17:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|ConjType=Conj
 17	högskolor	högskola	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	10	nmod	10:nmod:vid	_	Case=Loc|Definite=Ind|Gender=Com|Number=Plur
-18	etc	et_cetera	ADV	AB|AN	Abbr=Yes	4	conj	4:conj	SpaceAfter=No	Abbr=Yes
+18	etc	et_cetera	ADV	AB|AN	Abbr=Yes	4	conj	4:conj	SpaceAfter=No	_
 19	.	.	PUNCT	MAD	_	4	punct	4:punct	_	_
 
 
@@ -19121,11 +18943,11 @@
 1	Det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	2	expl	2:expl	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
 2	finns	finnas	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|Tense=Pres
 3	inte	inte	PART	AB	Polarity=Neg	2	advmod	2:advmod	_	_
-4	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	8	det	8:det	_	_
+4	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	8	det	8:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
 5	av	av	ADP	PP	_	6	case	6:case	_	_
 6	alla	all	PRON	PN|UTR/NEU|PLU|IND|SUB/OBJ	Definite=Ind|Number=Plur|PronType=Tot	7	obl:agent	7:obl:agent	_	Definite=Ind|Number=Plur|PronType=Tot|Case=Agt
 7	omfattad	omfattad	ADJ	PC|PRF|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part	8	amod	8:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part
-8	definition	definition	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	nsubj	2:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+8	definition	definition	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	nsubj	2:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 9	på	på	ADP	PP	_	12	mark	12:mark	_	_
 10	vad	vad	PRON	HP|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Int	12	dislocated	12:dislocated	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Int
 11	som	som	PRON	HP|-|-|-	PronType=Rel	12	nsubj	12:nsubj	_	PronType=Rel
@@ -19563,8 +19385,8 @@
 3	svårt	svår	ADJ	JJ|POS|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	2	obj	2:obj	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing
 4	att	att	PART	IE	_	5	mark	5:mark	_	_
 5	få	få	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	2	advcl	2:advcl:att	_	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-6	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	7	det	7:det	_	_
-7	ordning	ordning	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	5	obj	5:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+6	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	7	det	7:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+7	ordning	ordning	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	5	obj	5:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 8	på	på	ADP	PP	_	9	case	9:case	_	_
 9	dem	de	PRON	PN|UTR/NEU|PLU|DEF|OBJ	Case=Acc|Definite=Def|Number=Plur|PronType=Prs	5	obl	5:obl:på	SpaceAfter=No	Case=Ade|Definite=Def|Number=Plur|PronType=Prs
 10	.	.	PUNCT	MAD	_	2	punct	2:punct	_	_
@@ -19583,9 +19405,9 @@
 
 # sent_id = sv-ud-test-984
 # text = Något kort ögonblick tyckte jag att jag såg sakerna i deras rätta sammanhang.
-1	Något	någon	DET	DT|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind	3	det	3:det	_	_
+1	Något	någon	DET	DT|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind	3	det	3:det	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind
 2	kort	kort	ADJ	JJ|POS|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Sing	3	amod	3:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Sing
-3	ögonblick	ögonblick	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	4	obl	4:obl	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind
+3	ögonblick	ögonblick	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	4	obl	4:obl	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
 4	tyckte	tycka	VERB	VB|PRT|AKT	Mood=Ind|Tense=Past|VerbForm=Fin|Voice=Act	0	root	0:root	_	Mood=Ind|Tense=Past|Voice=Act|VerbForm=Fin
 5	jag	jag	PRON	PN|UTR|SIN|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	4	nsubj	4:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs
 6	att	att	SCONJ	SN	_	8	mark	8:mark	_	_
@@ -19620,8 +19442,8 @@
 17	inte	inte	PART	AB	Polarity=Neg	19	advmod	19:advmod	_	_
 18	kunnat	kunna	AUX	VB|SUP|AKT	VerbForm=Sup|Voice=Act	19	aux	19:aux	_	_
 19	hitta	hitta	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	10	conj	10:conj:och	_	VerbForm=Fin|Aspect=Perf|Mood=neg(Pot)|Polarity=Pos|Voice=Act|ConjType=Conj
-20	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	21	det	21:det	_	_
-21	utväg	utväg	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	19	obj	19:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+20	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	21	det	21:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+21	utväg	utväg	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	19	obj	19:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 22	för	för	ADP	PP	_	23	case	23:case	_	_
 23	dem	de	PRON	PN|UTR/NEU|PLU|DEF|OBJ	Case=Acc|Definite=Def|Number=Plur|PronType=Prs	19	obl	19:obl:för	SpaceAfter=No	Case=Ben|Definite=Def|Number=Plur|PronType=Prs
 24	.	.	PUNCT	MAD	_	4	punct	4:punct	_	_
@@ -19868,38 +19690,6 @@
 21	egen	egen	ADJ	JJ|POS|UTR|SIN|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	22	amod	22:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing
 22	existens	existens	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	19	obj	19:obj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 23	.	.	PUNCT	MAD	_	3	punct	3:punct	_	_
-
-
-# sent_id = sv-ud-test-999
-# text = Framför allt ska hon veta att hon är skapad för den rollen, och om hon inte klarar den är hennes egenvärde inte mycket att tala om.
-1	Framför	framför	ADP	PP	_	5	advmod	5:advmod	_	|
-2	allt	all	PRON	PN|NEU|SIN|IND|SUB/OBJ	Definite=Ind|Gender=Neut|Number=Sing|PronType=Prs	1	fixed	1:fixed	_	_
-3	ska	skola	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	5	aux	5:aux	_	_
-4	hon	hon	PRON	PN|UTR|SIN|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	5	nsubj	5:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs
-5	veta	veta	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	0:root	_	VerbForm=Fin|Tense=Fut|Mood=Ind|Polarity=Pos|Voice=Act
-6	att	att	SCONJ	SN	_	9	mark	9:mark	_	_
-7	hon	hon	PRON	PN|UTR|SIN|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	9	nsubj	9:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs
-8	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	9	cop	9:cop	_	_
-9	skapad	skapad	ADJ	PC|PRF|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part	5	ccomp	5:ccomp	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Pres|VerbForm=Fin|Mood=Ind|Polarity=Pos|Voice=Act|RelType=att
-10	för	för	ADP	PP	_	12	case	12:case	_	_
-11	den	den	DET	DT|UTR|SIN|DEF	Definite=Def|Gender=Com|Number=Sing|PronType=Art	12	det	12:det	_	_
-12	rollen	roll	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	9	obl	9:obl:för	SpaceAfter=No	Case=Ben|Definite=Def|Gender=Com|Number=Sing
-13	,	,	PUNCT	MID	_	20	punct	20:punct	_	_
-14	och	och	CCONJ	KN	_	20	cc	20:cc	_	_
-15	om	om	SCONJ	SN	_	18	mark	18:mark	_	_
-16	hon	hon	PRON	PN|UTR|SIN|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	18	nsubj	18:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs
-17	inte	inte	PART	AB	Polarity=Neg	18	advmod	18:advmod	_	_
-18	klarar	klara	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	20	advcl	20:advcl:om	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|RelType=The|Tense=Pres
-19	den	den	PRON	PN|UTR|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Com|Number=Sing|PronType=Prs	18	obj	18:obj	_	Definite=Def|Gender=Com|Number=Sing|PronType=Prs
-20	är	vara	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	5	conj	5:conj:och	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|ConjType=Conj|Tense=Pres
-21	hennes	hon	PRON	PS|UTR/NEU|SIN/PLU|DEF	Definite=Def|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	_	Definite=Def|Poss=Yes|PronType=Prs
-22	egenvärde	egenvärde	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	20	nsubj	20:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
-23	inte	inte	PART	AB	Polarity=Neg	20	advmod	20:advmod	_	_
-24	mycket	mycket	ADV	AB|POS	Degree=Pos	20	advmod	20:advmod	_	Degree=Pos
-25	att	att	PART	IE	_	26	mark	26:mark	_	_
-26	tala	tala	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	20	advcl	20:advcl:om	_	tala	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-27	om	om	ADP	PP	_	26	case	26:case	SpaceAfter=No	_
-28	.	.	PUNCT	MAD	_	5	punct	5:punct	_	_
 
 
 # sent_id = sv-ud-test-1000
@@ -20176,7 +19966,7 @@
 2	behöver	behöva	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
 3	inga	ingen	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Neg	5	det	5:det	_	_
 4	överflödiga	överflödig	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	5	amod	5:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
-5	varuhusronder	varuhusrond	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	2	obj	2:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur|PronType=Neg
+5	varuhusronder	varuhusrond	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	2	obj	2:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur
 6	eller	eller	CCONJ	KN	_	7	cc	7:cc	_	_
 7	dylikt	dylik	ADJ	JJ|POS|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	5	conj	2:obj|5:conj:eller	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|ConjType=Disj
 8	för	för	ADP	PP	_	10	mark	10:mark	_	_
@@ -20615,7 +20405,7 @@
 3	praktiskt	praktisk	ADV	AB|POS	Degree=Pos	2	advmod	2:advmod	_	Degree=Pos
 4	taget	tagen	ADJ	PC|PRF|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|Tense=Past|VerbForm=Part	3	fixed	3:fixed	_	_
 5	ingen	ingen	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Neg	6	det	6:det	_	_
-6	möjlighet	möjlighet	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	obj	2:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Neg
+6	möjlighet	möjlighet	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	obj	2:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 7	att	att	PART	IE	_	8	mark	8:mark	_	_
 8	nå	nå	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	6	acl	6:acl:att	_	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
 9	de	de	DET	DT|UTR/NEU|PLU|DEF	Definite=Def|Number=Plur|PronType=Art	11	det	11:det	_	_
@@ -20627,8 +20417,8 @@
 15	inte	inte	PART	AB	Polarity=Neg	18	advmod	18:advmod	_	_
 16	ens	ens	ADV	AB	_	18	advmod	18:advmod	_	|
 16.1	nå	nå	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	_	_	6:acl:att|8:conj	_	VerbForm=Inf|Voice=Act
-17	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	18	det	18:det	_	_
-18	mellanposition	mellanposition	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	8	conj	16.1:obj	Enhanced=obj	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|PronType=Ind
+17	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	18	det	18:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+18	mellanposition	mellanposition	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	8	conj	16.1:obj	Enhanced=obj	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act
 19	utom	utom	ADP	PP	_	21	case	21:case	_	_
 20	i	i	ADP	PP	_	21	case	21:case	_	_
 21	undantagsfall	undantagsfall	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	18	orphan	16.1:obl:i	Enhanced=obl|SpaceAfter=No	Case=Ext,Ine|Definite=Ind|Gender=Neut|Number=Plur
@@ -20898,8 +20688,8 @@
 4	vi	vi	PRON	PN|UTR|PLU|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs	3	nsubj	3:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs
 5	knappast	knappast	ADV	AB|SUV	Degree=Sup|Polarity=Neg	3	advmod	3:advmod	_	Degree=Sup|Polarity=Neg
 6	längre	länge	ADV	AB|KOM	Degree=Cmp	3	advmod	3:advmod	_	Degree=Cmp
-7	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	8	det	8:det	_	_
-8	alternativ	alternativ	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	3	obj	3:obj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur|PronType=Ind
+7	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	8	det	8:det	_	Definite=Ind|Number=Plur|PronType=Ind
+8	alternativ	alternativ	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	3	obj	3:obj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur
 9	till	till	ADP	PP	_	10	case	10:case	_	_
 10	pappa-mamma-barn-familjen	pappa-mamma-barn-familj	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	3	obl	3:obl:till	SpaceAfter=No	Case=Lat|Definite=Def|Gender=Com|Number=Sing
 11	,	,	PUNCT	MID	_	3	punct	3:punct	_	_
@@ -21198,7 +20988,7 @@
 14	att	att	SCONJ	SN	_	17	mark	17:mark	_	_
 15	daghemsbarn	daghemsbarn	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	17	nsubj	17:nsubj|21:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur
 16	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	17	cop	17:cop	_	_
-17	självständigare	självständig	ADJ	JJ|KOM|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Cmp	10	ccomp	10:ccomp	SpaceAfter=No	Case=Nom|Degree=Cmp|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|RelType=att,Cnd
+17	självständigare	självständig	ADJ	JJ|KOM|UTR/NEU|SIN/PLU|IND/DEF|NOM	Case=Nom|Degree=Cmp	10	ccomp	10:ccomp	SpaceAfter=No	Case=Nom|Degree=Cmp|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|RelType=att
 18	,	,	PUNCT	MID	_	21	punct	21:punct	_	_
 19	mindre	lite	ADV	AB|KOM	Degree=Cmp	20	advmod	20:advmod	_	Degree=Cmp
 20	ängsligt	ängslig	ADV	AB|POS	Degree=Pos	21	advmod	21:advmod	_	Degree=Pos
@@ -21524,7 +21314,7 @@
 # sent_id = sv-ud-test-1066
 # text = Barnen går ur famn i famn och är trots bindningen till modern inte uteslutande beroende av henne, något som rimligen bör garantera en större trygghet än ett absolut beroende.
 1	Barnen	barn	NOUN	NN|NEU|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Plur	2	nsubj	2:nsubj|15:nsubj	_	Case=Nom|Definite=Def|Gender=Neut|Number=Plur
-2	går	gå	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	0:root	_	RelType=Cnd|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
+2	går	gå	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
 3	ur	ur	ADP	PP	_	2	advmod	2:advmod	_	|
 4	famn	famn	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	3	fixed	3:fixed	_	_
 5	i	i	ADP	PP	_	3	fixed	3:fixed	_	_
@@ -21573,12 +21363,12 @@
 1	Den	den	PRON	PN|UTR|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Com|Number=Sing|PronType=Prs	2	nsubj:pass	2:nsubj:pass	_	Definite=Def|Gender=Com|Number=Sing|PronType=Prs
 2	praktiseras	praktisera	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Pass	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Pass|VerbForm=Fin
 3	på	på	ADP	PP	_	5	case	5:case	_	_
-4	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	5	det	5:det	_	_
-5	håll	håll	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	2	obl	2:obl:på	_	Case=Ade|Definite=Ind|Gender=Neut|Number=Plur|PronType=Ind
+4	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	5	det	5:det	_	Definite=Ind|Number=Plur|PronType=Ind
+5	håll	håll	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	2	obl	2:obl:på	_	Case=Ade|Definite=Ind|Gender=Neut|Number=Plur
 6	så	så	ADV	AB	_	2	advmod	2:advmod	_	|
 7	att	att	SCONJ	SN	_	13	mark	13:mark	_	_
-8	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	9	det	9:det	_	_
-9	familjer	familj	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	13	nsubj	11:nsubj|13:nsubj|16:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur|PronType=Ind
+8	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	9	det	9:det	_	Definite=Ind|Number=Plur|PronType=Ind
+9	familjer	familj	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	13	nsubj	11:nsubj|13:nsubj|16:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur
 10	som	som	PRON	HP|-|-|-	PronType=Rel	11	nsubj	9:ref	_	PronType=Rel
 11	trivs	trivas	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
 12	tillsammans	tillsammans	ADV	AB	_	11	advmod	11:advmod	_	|
@@ -21694,33 +21484,6 @@
 37	.	.	PUNCT	MAD	_	5	punct	5:punct	_	_
 
 
-# sent_id = sv-ud-test-1071
-# text = Och här har vi inte mycket att utgå från: vi måste vara djärva och visionära nog att tänka oss något nytt.
-1	Och	och	CCONJ	KN	_	3	cc	3:cc	_	_
-2	här	här	ADV	AB	_	3	advmod	3:advmod	_	|
-3	har	ha	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	0:root	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|ConjType=Conj|Tense=Pres
-4	vi	vi	PRON	PN|UTR|PLU|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs	3	nsubj	3:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs
-5	inte	inte	PART	AB	Polarity=Neg	3	advmod	3:advmod	_	_
-6	mycket	mycket	PRON	PN|NEU|SIN|IND|SUB/OBJ	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind	3	obj	3:obj	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind
-7	att	att	PART	IE	_	8	mark	8:mark	_	_
-8	utgå	utgå	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	6	acl	6:acl:från	_	utgå	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-9	från	från	ADP	PP	_	8	case	8:case	SpaceAfter=No	_
-10	:	:	PUNCT	MID	_	3	punct	3:punct	_	_
-11	vi	vi	PRON	PN|UTR|PLU|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs	14	nsubj	14:nsubj|16:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs
-12	måste	måste	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	14	aux	14:aux	_	_
-13	vara	vara	AUX	VB|INF|AKT	VerbForm=Inf|Voice=Act	14	cop	14:cop	_	_
-14	djärva	djärv	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	3	parataxis	3:parataxis	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|VerbForm=Fin|Tense=Pres|Mood=Ind,Nec|Polarity=Pos|Voice=Act
-15	och	och	CCONJ	KN	_	16	cc	16:cc	_	_
-16	visionära	visionär	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	14	conj	14:conj:och	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|ConjType=Conj
-17	nog	nog	ADV	AB	_	16	advmod	16:advmod	_	|
-18	att	att	PART	IE	_	19	mark	19:mark	_	_
-19	tänka	tänka	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	14	advcl	14:advcl:att	_	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-20	oss	vi	PRON	PN|UTR|PLU|DEF|OBJ	Case=Acc|Definite=Def|Gender=Com|Number=Plur|PronType=Prs	19	iobj	19:iobj	_	Case=Acc|Definite=Def|Gender=Com|Number=Plur|PronType=Prs
-21	något	någon	DET	DT|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind	22	det	22:det	_	_
-22	nytt	ny	ADJ	JJ|POS|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	19	obj	19:obj	SpaceAfter=No	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing|PronType=Ind
-23	.	.	PUNCT	MAD	_	3	punct	3:punct	_	_
-
-
 # newpar id = P415.13
 # sent_id = sv-ud-test-1072
 # text = Vi är tvungna att råda bot på det ångestskapande beroendet av en enda person - vem denna person än är blir friktionsytan abnormt stor.
@@ -21770,9 +21533,9 @@
 14	tvingas	tvinga	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Pass	9	conj	6:acl:relcl|9:conj:och	_	ConjType=Conj|Mood=Ind|Tense=Pres|Voice=Pass|VerbForm=Fin
 15	rivalisera	rivalisera	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	14	advcl	14:advcl	_	Voice=Act|VerbForm=Inf
 16	om	om	ADP	PP	_	19	case	19:case	_	_
-17	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	19	det	19:det	_	_
+17	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	19	det	19:det	_	Definite=Ind|Number=Plur|PronType=Ind
 18	få	få	ADJ	JJ|POS|UTR/NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Plur	19	amod	19:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Plur
-19	vuxna	vuxen	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	15	advmod	15:advmod|22:nsubj|23:nsubj	_	Case=The|Definite=Ind|Degree=Pos|Number=Plur|PronType=Ind
+19	vuxna	vuxen	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	15	advmod	15:advmod|22:nsubj|23:nsubj	_	Case=The|Definite=Ind|Degree=Pos|Number=Plur
 20	som	som	PRON	HP|-|-|-	PronType=Rel	22	nsubj	19:ref	_	PronType=Rel
 21	inte	inte	PART	AB	Polarity=Neg	22	advmod	22:advmod	_	_
 22	orkar	orka	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	19	acl:relcl	19:acl:relcl	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|Tense=Pres
@@ -21795,80 +21558,6 @@
 39	världen	värld	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	37	nmod	37:nmod:till	_	Case=Lat|Definite=Def|Gender=Com|Number=Sing
 40	utanför	utanför	ADV	AB	_	39	advmod	39:advmod	SpaceAfter=No	|
 41	.	.	PUNCT	MAD	_	3	punct	3:punct	_	_
-
-
-# newpar id = P415.15
-# sent_id = sv-ud-test-1074
-# text = Låt oss utgå från vad barnen behöver: trygghet och värme, intresse och stimulans, flera vuxna att lita på och tycka om, kamrater i olika åldrar, svängrum, arbetsmaterial, en fredad vrå och en gemenskap att höra till, någon som putsar näsan och någon som hör på - allt går inte att räkna upp, men vad ska det gå ut på?
-1	Låt	låta	VERB	VB|IMP|AKT	Mood=Imp|VerbForm=Fin|Voice=Act	0	root	0:root	_	Mood=Imp|Voice=Act|VerbForm=Fin
-2	oss	vi	PRON	PN|UTR|PLU|DEF|OBJ	Case=Acc|Definite=Def|Gender=Com|Number=Plur|PronType=Prs	1	obj	1:obj|3:nsubj	_	Case=Acc|Definite=Def|Gender=Com|Number=Plur|PronType=Prs
-3	utgå	utgå	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	1	xcomp	1:xcomp	_	Voice=Act|VerbForm=Inf
-4	från	från	ADP	PP	_	7	mark	7:mark	_	_
-5	vad	vad	PRON	HP|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Int	7	obj	7:obj	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Int
-6	barnen	barn	NOUN	NN|NEU|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Plur	7	nsubj	7:nsubj	_	Case=Nom|Definite=Def|Gender=Neut|Number=Plur
-7	behöver	behöva	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	3	advcl	3:advcl:från	SpaceAfter=No	RelType=Abl|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-8	:	:	PUNCT	MID	_	7	punct	7:punct	_	_
-9	trygghet	trygghet	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	7	appos	7:appos	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
-10	och	och	CCONJ	KN	_	11	cc	11:cc	_	_
-11	värme	värme	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	9	conj	7:appos|9:conj:och	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|ConjType=Conj
-12	,	,	PUNCT	MID	_	13	punct	13:punct	_	_
-13	intresse	intresse	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	9	conj	7:appos|9:conj:och	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
-14	och	och	CCONJ	KN	_	15	cc	15:cc	_	_
-15	stimulans	stimulans	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	9	conj	7:appos|9:conj:och	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|ConjType=Conj
-16	,	,	PUNCT	MID	_	18	punct	18:punct	_	_
-17	flera	flera	ADJ	JJ|POS|UTR/NEU|PLU|IND|NOM	Case=Nom|Degree=Pos|Number=Plur	18	amod	18:amod	_	Case=Nom|Degree=Pos|Number=Plur
-18	vuxna	vuxen	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	9	conj	7:appos|9:conj:och	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
-19	att	att	PART	IE	_	20	mark	20:mark	_	_
-20	lita	lita	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	18	acl	18:acl:på	_	lita	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-21	på	på	ADP	PP	_	20	case	20:case	_	_
-22	och	och	CCONJ	KN	_	23	cc	23:cc	_	_
-23	tycka	tycka	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	20	conj	18:acl:på|20:conj:och	_	ConjType=Conj|Voice=Act|VerbForm=Inf
-24	om	om	ADP	PL	_	23	compound:prt	23:compound:prt	SpaceAfter=No	_
-25	,	,	PUNCT	MID	_	26	punct	26:punct	_	_
-26	kamrater	kamrat	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	9	conj	7:appos|9:conj:och	_	Case=Nom|Definite=Ind|Gender=Com|Number=Plur
-27	i	i	ADP	PP	_	29	case	29:case	_	_
-28	olika	olik	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Degree=Pos	29	amod	29:amod	_	Case=Nom|Degree=Pos
-29	åldrar	ålder	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	26	nmod	26:nmod:i	SpaceAfter=No	Case=Ine|Definite=Ind|Gender=Com|Number=Plur
-30	,	,	PUNCT	MID	_	31	punct	31:punct	_	_
-31	svängrum	svängrum	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	9	conj	7:appos|9:conj:och	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
-32	,	,	PUNCT	MID	_	33	punct	33:punct	_	_
-33	arbetsmaterial	arbetsmaterial	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	9	conj	7:appos|9:conj:och	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
-34	,	,	PUNCT	MID	_	37	punct	37:punct	_	_
-35	en	en	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Art	37	det	37:det	_	_
-36	fredad	fredad	ADJ	PC|PRF|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part	37	amod	37:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part
-37	vrå	vrå	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	9	conj	7:appos|9:conj:och	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
-38	och	och	CCONJ	KN	_	40	cc	40:cc	_	_
-39	en	en	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Art	40	det	40:det	_	_
-40	gemenskap	gemenskap	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	9	conj	7:appos|9:conj:och	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|ConjType=Conj
-41	att	att	PART	IE	_	42	mark	42:mark	_	_
-42	höra	höra	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	40	acl	40:acl:till	_	höra	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-43	till	till	ADP	PP	_	42	case	42:case	SpaceAfter=No	_
-44	,	,	PUNCT	MID	_	45	punct	45:punct	_	_
-45	någon	någon	PRON	PN|UTR|SIN|IND|SUB/OBJ	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	9	conj	7:appos|9:conj:och|47:nsubj	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
-46	som	som	PRON	HP|-|-|-	PronType=Rel	47	nsubj	45:ref	_	PronType=Rel
-47	putsar	putsa	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	45	acl:relcl	45:acl:relcl	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-48	näsan	näsa	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	47	obj	47:obj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing
-49	och	och	CCONJ	KN	_	50	cc	50:cc	_	_
-50	någon	någon	PRON	PN|UTR|SIN|IND|SUB/OBJ	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	9	conj	7:appos|9:conj:och|52:nsubj	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind|ConjType=Conj
-51	som	som	PRON	HP|-|-|-	PronType=Rel	52	nsubj	50:ref	_	PronType=Rel
-52	hör	höra	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	50	acl:relcl	50:acl:relcl	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-53	på	på	ADP	PL	_	52	compound:prt	52:compound:prt	_	_
-54	-	-	PUNCT	MID	_	1	punct	1:punct	_	_
-55	allt	all	PRON	PN|NEU|SIN|IND|SUB/OBJ	Definite=Ind|Gender=Neut|Number=Sing|PronType=Tot	56	nsubj	56:nsubj	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Tot
-56	går	gå	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	1	parataxis	1:parataxis	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|Tense=Pres
-57	inte	inte	PART	AB	Polarity=Neg	56	advmod	56:advmod	_	_
-58	att	att	PART	IE	_	59	mark	59:mark	_	_
-59	räkna	räkna	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	56	advcl	56:advcl:att	_	VerbForm=Inf|Polarity=Pos|Mood=Ind|Voice=Act
-60	upp	upp	ADV	PL	_	59	compound:prt	59:compound:prt	SpaceAfter=No	|
-61	,	,	PUNCT	MID	_	66	punct	66:punct	_	_
-62	men	men	CCONJ	KN	_	66	cc	66:cc	_	_
-63	vad	vad	PRON	HP|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Int	66	obl	66:obl:på	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Int|Case=Ade
-64	ska	skola	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	66	aux	66:aux	_	_
-65	det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	66	nsubj	66:nsubj	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
-66	gå	gå	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	1	conj	1:conj:men	_	VerbForm=Fin|Tense=Fut|Mood=Ind|Polarity=Pos|Voice=Act|ConjType=Advs
-67	ut	ut	ADV	PL	_	66	compound:prt	66:compound:prt	_	|
-68	på	på	ADP	PP	_	63	case	63:case	SpaceAfter=No	_
-69	?	?	PUNCT	MAD	_	66	punct	66:punct	_	_
 
 
 # sent_id = sv-ud-test-1075
@@ -22932,8 +22621,8 @@
 17	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	18	cop	18:cop	_	_
 18	gynnsamma	gynnsam	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	29	advcl	29:advcl:eftersom	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Neg|Voice=Act|RelType=Cau
 19	för	för	ADP	PP	_	21	case	21:case	_	_
-20	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	21	det	21:det	_	_
-21	kategori	kategori	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	18	obl	18:obl:för	_	Case=Ben|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+20	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	21	det	21:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+21	kategori	kategori	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	18	obl	18:obl:för	_	Case=Ben|Definite=Ind|Gender=Com|Number=Sing
 22	-	-	PUNCT	MID	_	29	punct	29:punct	_	_
 23	borde	böra	AUX	VB|PRT|AKT	Mood=Ind|Tense=Past|VerbForm=Fin|Voice=Act	29	aux	29:aux	_	_
 24	vi	vi	PRON	PN|UTR|PLU|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs	29	nsubj	29:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs
@@ -23500,8 +23189,8 @@
 6	kan	kunna	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	7	aux	7:aux	_	_
 7	väntas	vänta	VERB	VB|INF|SFO	VerbForm=Inf|Voice=Pass	3	acl:relcl	3:acl:relcl	_	VerbForm=Fin|Tense=Pres|Mood=Ind,Pot|Polarity=Pos|Voice=Act
 8	om	om	ADP	PP	_	10	case	10:case	_	_
-9	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	10	det	10:det	_	_
-10	år	år	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	7	obl	7:obl:om	SpaceAfter=No	Case=The|Definite=Ind|Gender=Neut|Number=Plur|PronType=Ind
+9	några	någon	DET	DT|UTR/NEU|PLU|IND	Definite=Ind|Number=Plur|PronType=Ind	10	det	10:det	_	Definite=Ind|Number=Plur|PronType=Ind
+10	år	år	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	7	obl	7:obl:om	SpaceAfter=No	Case=The|Definite=Ind|Gender=Neut|Number=Plur
 11	,	,	PUNCT	MID	_	3	punct	3:punct	_	_
 12	kommer	komma	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	16	aux	16:aux	_	_
 13	att	att	PART	IE	_	16	mark	16:mark	_	_
@@ -23710,8 +23399,8 @@
 17	familjesyn	familjesyn	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	10	obl	10:obl:för	_	Case=Ben|Definite=Ind|Gender=Com|Number=Sing
 18	men	men	CCONJ	KN	_	10	cc	10:cc	_	_
 19	att	att	SCONJ	SN	_	27	mark	27:mark	_	_
-20	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	21	det	21:det	_	_
-21	majoritet	majoritet	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	27	nsubj	27:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+20	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	21	det	21:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+21	majoritet	majoritet	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	27	nsubj	27:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 22	av	av	ADP	PP	_	24	case	24:case	_	_
 23	svenska	svensk	ADJ	JJ|POS|UTR/NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Degree=Pos	24	amod	24:amod	_	Case=Nom|Definite=Def|Degree=Pos
 24	folket	folk	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	21	nmod	21:nmod:av	_	Case=Agt|Definite=Def|Gender=Neut|Number=Sing
@@ -23808,9 +23497,9 @@
 3	väsen	väsen	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	10	obj	10:obj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
 4	lär	lär	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	10	aux	10:aux	_	_
 5	inte	inte	PART	AB	Polarity=Neg	10	advmod	10:advmod	_	_
-6	något	någon	DET	DT|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind	8	det	8:det	_	_
+6	något	någon	DET	DT|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind	8	det	8:det	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind
 7	politiskt	politisk	ADJ	JJ|POS|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	8	amod	8:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing
-8	parti	parti	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	10	nsubj	10:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing|PronType=Ind
+8	parti	parti	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	10	nsubj	10:nsubj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing
 9	kunna	kunna	AUX	VB|INF|AKT	VerbForm=Inf|Voice=Act	10	aux	10:aux	_	_
 10	påverka	påverka	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	0:root	SpaceAfter=No	VerbForm=Fin|Tense=Pres|Mood=Ind,neg(Nec,Pot)|Polarity=Pos|Voice=Act
 11	,	,	PUNCT	MID	_	19	punct	19:punct	_	_
@@ -24311,35 +24000,6 @@
 5	ogifta	ogift	ADJ	JJ|POS|UTR/NEU|PLU|IND/DEF|NOM	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur	6	amod	6:amod	_	Case=Nom|Definite=Ind|Degree=Pos|Number=Plur
 6	familjebildare	familjebildare	NOUN	NN|UTR|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Plur	2	nsubj	2:nsubj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Plur
 7	?	?	PUNCT	MAD	_	2	punct	2:punct	_	_
-
-
-# sent_id = sv-ud-test-1165
-# text = Det finns ingen undersökning gjord över vad orsaken är till att familjebildning, med eller utan barn, sker utan att parterna gifter sig.
-1	Det	den	PRON	PN|NEU|SIN|DEF|SUB/OBJ	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs	2	expl	2:expl	_	Definite=Def|Gender=Neut|Number=Sing|PronType=Prs
-2	finns	finnas	VERB	VB|PRS|SFO	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_	Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-3	ingen	ingen	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Neg	4	det	4:det	_	_
-4	undersökning	undersökning	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	2	nsubj	2:nsubj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Neg
-5	gjord	gjord	ADJ	PC|PRF|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part	4	acl	4:acl	_	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|Tense=Past|VerbForm=Part
-6	över	över	ADP	PP	_	8	mark	8:mark	_	_
-7	vad	vad	PRON	HP|NEU|SIN|IND	Definite=Ind|Gender=Neut|Number=Sing|PronType=Int	8	nsubj	8:nsubj	_	Definite=Ind|Gender=Neut|Number=Sing|PronType=Int
-8	orsaken	orsak	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	5	advcl	5:advcl:över	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing|VerbForm=Fin|Tense=Pres|Mood=Ind|Polarity=Pos|Voice=Act|RelType=The
-9	är	vara	AUX	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	8	cop	8:cop	_	_
-10	till	till	ADP	PP	_	19	mark	19:mark	_	_
-11	att	att	SCONJ	SN	_	19	mark	19:mark	_	_
-12	familjebildning	familjebildning	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	19	nsubj	19:nsubj	SpaceAfter=No	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
-13	,	,	PUNCT	MID	_	12	punct	12:punct	_	_
-14	med	med	ADP	PP	_	17	case	17:case	_	Case=Abe
-15	eller	eller	CCONJ	KN	_	16	cc	16:cc	_	_
-16	utan	utan	ADP	PP	_	14	conj	14:conj:eller|17:case	_	ConjType=Disj
-17	barn	barn	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	12	nmod	12:nmod:med	SpaceAfter=No	Case=Com|Definite=Ind|Gender=Neut|Number=Sing
-18	,	,	PUNCT	MID	_	12	punct	12:punct	_	_
-19	sker	ske	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	8	advcl	8:advcl:att	_	RelType=Lat,att|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-20	utan	utan	ADP	PP	_	23	mark	23:mark	_	_
-21	att	att	SCONJ	SN	_	23	mark	23:mark	_	_
-22	parterna	part	NOUN	NN|UTR|PLU|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Plur	23	nsubj	23:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Plur
-23	gifter	gifta	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	19	advcl	19:advcl:att	_	RelType=Abe,att|Mood=Ind|Tense=Pres|Voice=Act|VerbForm=Fin
-24	sig	sig	PRON	PN|UTR/NEU|SIN/PLU|DEF|OBJ	Case=Acc|Definite=Def|PronType=Prs	23	obj	23:obj	SpaceAfter=No	Case=Acc|Definite=Def|PronType=Prs
-25	.	.	PUNCT	MAD	_	2	punct	2:punct	_	_
 
 
 # sent_id = sv-ud-test-1166
@@ -25000,7 +24660,7 @@
 17	så	så	ADV	AB	_	16	fixed	16:fixed	_	_
 18	fall	fall	NOUN	NN|NEU|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	16	fixed	16:fixed	_	_
 19	ingen	ingen	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Neg	20	det	20:det	_	_
-20	rätt	rätt	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	15	obj	15:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Neg
+20	rätt	rätt	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	15	obj	15:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing
 21	till	till	ADP	PP	_	23	case	23:case	_	_
 22	den	den	DET	DT|UTR|SIN|DEF	Definite=Def|Gender=Com|Number=Sing|PronType=Art	23	det	23:det	_	_
 23	egendom	egendom	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	15	obl	15:obl:till|28:nsubj	_	Case=Lat|Definite=Def|Gender=Com|Number=Sing
@@ -25010,35 +24670,6 @@
 27	varit	vara	AUX	VB|SUP|AKT	VerbForm=Sup|Voice=Act	28	cop	28:cop	_	_
 28	gemensam	gemensam	ADJ	JJ|POS|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	23	acl:relcl	23:acl:relcl	SpaceAfter=No	Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing|VerbForm=Fin|Aspect=Perf|Polarity=Pos|Mood=Ind|Voice=Act
 29	.	.	PUNCT	MAD	_	15	punct	15:punct	_	_
-
-
-# sent_id = sv-ud-test-1194
-# text = Skulle modern dö och efterlämna barn har fadern inte självklart någon vårdnadsrätt till de barn som han levt och bott med fram till dödsfallet.
-1	Skulle	skola	AUX	VB|PRT|AKT	Mood=Ind|Tense=Past|VerbForm=Fin|Voice=Act	3	aux	3:aux	_	_
-2	modern	mor	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	3	nsubj	3:nsubj|5:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing
-3	dö	dö	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	7	advcl	7:advcl	_	VerbForm=Fin|Tense=Past|Mood=Ind|Polarity=Pos|Voice=Act
-4	och	och	CCONJ	KN	_	5	cc	5:cc	_	_
-5	efterlämna	efterlämna	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	3	conj	3:conj:och|7:advcl	_	ConjType=Conj|Voice=Act|VerbForm=Inf
-6	barn	barn	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	5	obj	5:obj	_	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur
-7	har	ha	VERB	VB|PRS|AKT	Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	0:root	_	VerbForm=Fin|Polarity=Neg|Mood=Ind|Voice=Act|Tense=Pres
-8	fadern	far	NOUN	NN|UTR|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Com|Number=Sing	7	nsubj	7:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing
-9	inte	inte	PART	AB	Polarity=Neg	7	advmod	7:advmod	_	_
-10	självklart	självklar	ADV	AB|POS	Degree=Pos	7	advmod	7:advmod	_	Degree=Pos
-11	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Ind	12	det	12:det	_	_
-12	vårdnadsrätt	vårdnadsrätt	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	7	obj	7:obj	_	Case=Nom|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
-13	till	till	ADP	PP	_	15	case	15:case	_	_
-14	de	de	DET	DT|UTR/NEU|PLU|DEF	Definite=Def|Number=Plur|PronType=Art	15	det	15:det	_	_
-15	barn	barn	NOUN	NN|NEU|PLU|IND|NOM	Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	7	obl	7:obl:till|18:obl:till	_	Case=Lat|Definite=Def|Gender=Neut|Number=Plur
-16	som	som	PRON	HP|-|-|-	PronType=Rel	18	obl	15:ref	_	PronType=Rel
-17	han	han	PRON	PN|UTR|SIN|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	18	nsubj	18:nsubj|20:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs
-18	levt	leva	VERB	VB|SUP|AKT	VerbForm=Sup|Voice=Act	15	acl:relcl	15:acl:relcl	_	leva	VerbForm=Sup|Voice=Act
-19	och	och	CCONJ	KN	_	20	cc	20:cc	_	_
-20	bott	bo	VERB	VB|SUP|AKT	VerbForm=Sup|Voice=Act	18	conj	15:acl:relcl|18:conj:och	_	ConjType=Conj|Voice=Act|VerbForm=Sup
-21	med	med	ADP	PP	_	18	case	18:case	_	_
-22	fram	fram	ADV	AB	_	24	advmod	24:advmod	_	|
-23	till	till	ADP	PP	_	24	case	24:case	_	_
-24	dödsfallet	dödsfall	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	18	obl	18:obl:till	SpaceAfter=No	Case=Lat|Definite=Def|Gender=Neut|Number=Sing
-25	.	.	PUNCT	MAD	_	7	punct	7:punct	_	_
 
 
 # sent_id = sv-ud-test-1195
@@ -25127,8 +24758,8 @@
 7	vi	vi	PRON	PN|UTR|PLU|DEF|SUB	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs	12	nsubj	12:nsubj	_	Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs
 8	kanske	kanske	ADV	AB	_	12	advmod	12:advmod	_	|
 9	i	i	ADP	PP	_	11	case	11:case	_	_
-10	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Prs	11	det	11:det	_	_
-11	mån	mån	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	12	obl	12:obl:i	_	Case=Ine|Definite=Ind|Gender=Com|Number=Sing|PronType=Ind
+10	någon	någon	DET	DT|UTR|SIN|IND	Definite=Ind|Gender=Com|Number=Sing|PronType=Prs	11	det	11:det	_	Definite=Ind|Gender=Com|Number=Sing|PronType=Prs
+11	mån	mån	NOUN	NN|UTR|SIN|IND|NOM	Case=Nom|Definite=Ind|Gender=Com|Number=Sing	12	obl	12:obl:i	_	Case=Ine|Definite=Ind|Gender=Com|Number=Sing
 12	göra	göra	VERB	VB|INF|AKT	VerbForm=Inf|Voice=Act	0	root	0:root	_	VerbForm=Fin|Tense=Pres|Mood=Ind,Pot|Polarity=Pos|Voice=Act
 13	äktenskapet	äktenskap	NOUN	NN|NEU|SIN|DEF|NOM	Case=Nom|Definite=Def|Gender=Neut|Number=Sing	12	obj	12:obj|15:nsubj	_	Case=Nom|Definite=Def|Gender=Neut|Number=Sing
 14	mer	mycket	ADV	AB|KOM	Degree=Cmp	15	advmod	15:advmod	_	_
